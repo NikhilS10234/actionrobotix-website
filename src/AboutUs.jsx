@@ -19,6 +19,7 @@ const subteams = [
     members: [
       { name: "Arnav A", grade: "10th Grade", img: "Images/arnavA.png" },
       { name: "Keshav", grade: "10th Grade", img: "Images/keshav.png" },
+      { name: "Ashvik", grade: "11th Grade", img: "Images/ashvik.png" },
     ],
   },
   {
@@ -29,7 +30,6 @@ const subteams = [
       { name: "Mihir", grade: "10th Grade", img: "Images/mihir.png" },
       { name: "Naisha", grade: "10th Grade", img: "Images/Naisha.png" },
       { name: "Arjun", grade: "11th Grade", img: "Images/arjun.png" },
-      { name: "Ashvik", grade: "11th Grade", img: "Images/ashvik.png" },
     ],
   },
   {

@@ -31,7 +31,7 @@ const images = [
   { src: "Images/mihir.png", alt: "Mihir — Build", category: "Team" },
   { src: "Images/Naisha.png", alt: "Naisha — Build", category: "Team" },
   { src: "Images/arjun.png", alt: "Arjun — Build", category: "Team" },
-  { src: "Images/ashvik.png", alt: "Ashvik — Build", category: "Team" },
+  { src: "Images/ashvik.png", alt: "Ashvik — Design", category: "Team" },
   { src: "Images/adi.png", alt: "Adi — Programming", category: "Team" },
   { src: "Images/vihaan.png", alt: "Vihaan — Programming", category: "Team" },
   { src: "Images/ayush.png", alt: "Ayush — Programming", category: "Team" },
