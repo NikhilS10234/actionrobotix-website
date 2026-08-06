@@ -17,39 +17,38 @@ const subteams = [
     name: "Design",
     icon: <BrushIcon />,
     members: [
-      { name: "Arnav A", grade: "10th Grade", img: "Images/arnavA.png" },
-      { name: "Keshav", grade: "10th Grade", img: "Images/keshav.png" },
-      { name: "Ashvik", grade: "11th Grade", img: "Images/ashvik.png" },
+      { name: "Ashvik Kothari", grade: "Design Lead · 3rd Year", img: "Images/ashvik.png" },
+      { name: "Arnav Anilkumar", grade: "Business · 2nd Year", img: "Images/arnavA.png" },
+      { name: "Keshav Pallavur", grade: "Fundraising · 2nd Year", img: "Images/keshav.png" },
     ],
   },
   {
     name: "Build",
     icon: <BuildIcon />,
     members: [
-      { name: "Arnav M", grade: "10th Grade", img: "Images/arnavM.png" },
-      { name: "Mihir", grade: "10th Grade", img: "Images/mihir.png" },
-      { name: "Naisha", grade: "10th Grade", img: "Images/Naisha.png" },
-      { name: "Arjun", grade: "11th Grade", img: "Images/arjun.png" },
+      { name: "Arjun Arun", grade: "Build Lead · 3rd Year", img: "Images/arjun.png" },
+      { name: "Arnav Madhavan", grade: "Mechanical · 2nd Year", img: "Images/arnavM.png" },
+      { name: "Mihir Choudhary", grade: "Organization · 2nd Year", img: "Images/mihir.png" },
     ],
   },
   {
     name: "Programming",
     icon: <CodeIcon />,
     members: [
-      { name: "Harsha", grade: "9th Grade" },
-      { name: "Ayush", grade: "10th Grade", img: "Images/ayush.png" },
-      { name: "Adi", grade: "11th Grade", img: "Images/adi.png" },
-      { name: "Vihaan", grade: "11th Grade", img: "Images/vihaan.png" },
+      { name: "Adi Ganesh", grade: "Programming Lead · 3rd Year", img: "Images/adi.png" },
+      { name: "Vihaan Punjabi", grade: "Impact · 3rd Year", img: "Images/vihaan.png" },
+      { name: "Ayush Rausaria", grade: "Event Planning · 2nd Year", img: "Images/ayush.png" },
+      { name: "Harsha Konakandla", grade: "Scheduling · Rookie" },
     ],
   },
   {
     name: "Outreach",
     icon: <CampaignIcon />,
     members: [
-      { name: "Anvika", grade: "10th Grade" },
-      { name: "Sai", grade: "10th Grade" },
-      { name: "Ishaan", grade: "11th Grade", img: "Images/ishaan.png" },
-      { name: "Nikhil", grade: "11th Grade", img: "Images/nikhil.jpeg" },
+      { name: "Ishaan Vitthala", grade: "Outreach Lead & Captain · 3rd Year", img: "Images/ishaan.png" },
+      { name: "Naisha Salaria", grade: "Local Outreach · 2nd Year", img: "Images/Naisha.png" },
+      { name: "Avnika Malugu", grade: "International Outreach · Rookie" },
+      { name: "Saideep Kondamadugula", grade: "Local Outreach · Rookie" },
     ],
   },
 ];
@@ -61,12 +60,12 @@ const coaches = [
 ];
 
 const mentors = [
-  { name: "Amit Jha", role: "Programming Mentor", background: "PhD, Senior Software Engineer — software architecture, debugging, state-based logic" },
-  { name: "Dr. David Letscher", role: "Programming Mentor", background: "Computer Science Professor at SLU — data structures, algorithmic thinking" },
-  { name: "Jason Fritts", role: "Programming Mentor", background: "Associate Professor of CS at SLU — computer vision (OpenCV, Limelight), camera calibration" },
-  { name: "Prateek Gautam", role: "Outreach Mentor", background: "CS student at MIT, FTC alum — outreach workshops, simplifying STEM concepts" },
-  { name: "Colin Shipley", role: "Design Mentor", background: "Senior Automation Engineer at Bastian Solutions — automation principles, failure recovery design" },
-  { name: "Abhi Ganesh", role: "Engineering Mentor", background: "Software Engineer at Oracle, FTC alum — systems thinking, cycle-time bottlenecks" },
+  { name: "Amit Jha", role: "Programming Mentor", background: "PhD, Senior Software Engineer at Missouri S&T — laid the groundwork for our software architecture and debugging practices." },
+  { name: "Dr. David Letscher", role: "Programming Mentor", background: "Computer Science Professor at SLU — data structures and algorithmic thinking to improve code efficiency and performance." },
+  { name: "Jason Fritts", role: "Programming Mentor", background: "Professor of Computer Science at SLU — OpenCV and Limelight, refined contour detection and alignment thresholds." },
+  { name: "Prateek Gautam", role: "Outreach Mentor", background: "MIT alum, AI Engineer at Palintir — scaled our outreach by developing structured robotics workshops for students." },
+  { name: "Collin Shipley", role: "Design Mentor", background: "Bastian Solutions Engineer, FTC alum — structured coding practices, system-level thinking, and applying AI concepts effectively." },
+  { name: "Abhi Ganesh", role: "Engineering Mentor", background: "Software Engineer at Oracle, FTC alum — systems thinking across drivetrain, intake, and vision to reduce cycle-time bottlenecks." },
 ];
 
 const results = [
@@ -83,10 +82,16 @@ const results = [
     detail: "135.5 point average — top honor and the alliance title in one event.",
   },
   {
-    title: "MO/KS State Championship",
+    title: "MO/KS State Championship & League Tournament",
     robot: "Catalyst V2",
     award: "1st — Sustain Award",
     detail: "Placed 8th in Advancement Points and qualified for the Chicago Robotics Invitational (CRI).",
+  },
+  {
+    title: "Chicago Robotics Invitational",
+    robot: "Catalyst 2.0",
+    award: "Qualified & Competed",
+    detail: "Brought our third robot iteration — a pocketed carbon-fiber chassis, molded vector wheels, and active counter-rollers — to compete against some of the best teams in the country.",
   },
 ];
 
@@ -184,7 +189,7 @@ const AboutUs = () => {
               <Grid2 container spacing={3} sx={{ mt: 3 }}>
                 {[
                   { to: 2024, label: "Founded" },
-                  { to: 15, label: "Students" },
+                  { to: 14, label: "Students" },
                   { to: 4, label: "Subteams" },
                 ].map((s) => (
                   <Grid2 key={s.label} size={4}>

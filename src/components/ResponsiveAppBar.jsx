@@ -26,54 +26,75 @@ const isGroupActive = (group, pathname) => {
   return paths.some((p) => pathname.toLowerCase() === p.toLowerCase());
 };
 
+const pillButtonSx = (active) => ({
+  position: "relative",
+  zIndex: 1,
+  color: active ? "#fff" : "text.primary",
+  fontWeight: 700,
+  fontSize: "0.88rem",
+  letterSpacing: "0.01em",
+  py: 1,
+  px: 2,
+  minWidth: "auto",
+  borderRadius: 999,
+  whiteSpace: "nowrap",
+  "&:hover": { backgroundColor: active ? "transparent" : "rgba(255,255,255,0.06)" },
+});
+
+const ActivePill = () => (
+  <motion.div
+    layoutId="nav-pill"
+    transition={{ type: "spring", stiffness: 420, damping: 34 }}
+    style={{
+      position: "absolute",
+      inset: 0,
+      borderRadius: 999,
+      background: "linear-gradient(135deg, #2f7dff 0%, #1a5ad9 100%)",
+      boxShadow: "0 6px 20px rgba(47,125,255,0.45)",
+    }}
+  />
+);
+
 const NavGroupButton = ({ group, active, onNavigate }) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   if (!group.items) {
     return (
-      <Box sx={{ position: "relative", px: 0.3 }}>
-        <Button
-          onClick={() => onNavigate(group.path)}
-          sx={{
-            color: active ? "primary.light" : "text.primary",
-            fontWeight: active ? 700 : 500,
-            py: 2,
-            px: 1.4,
-            minWidth: "auto",
-            fontSize: "0.9rem",
-            whiteSpace: "nowrap",
-          }}
-        >
+      <Box sx={{ position: "relative", px: 0.3, py: 1 }}>
+        {active && <ActivePill />}
+        <Button onClick={() => onNavigate(group.path)} sx={pillButtonSx(active)}>
           {group.label}
         </Button>
-        {active && <ActiveUnderline />}
       </Box>
     );
   }
 
   return (
-    <Box sx={{ position: "relative", px: 0.3 }}>
+    <Box sx={{ position: "relative", px: 0.3, py: 1 }}>
+      {active && <ActivePill />}
       <Button
         onClick={(e) => setAnchorEl(e.currentTarget)}
         endIcon={<KeyboardArrowDownIcon fontSize="small" />}
-        sx={{
-          color: active ? "primary.light" : "text.primary",
-          fontWeight: active ? 700 : 500,
-          py: 2,
-          px: 1.4,
-          minWidth: "auto",
-          fontSize: "0.9rem",
-          whiteSpace: "nowrap",
-        }}
+        sx={pillButtonSx(active)}
       >
         {group.label}
       </Button>
-      {active && <ActiveUnderline />}
       <Menu
         anchorEl={anchorEl}
         open={Boolean(anchorEl)}
         onClose={() => setAnchorEl(null)}
-        slotProps={{ paper: { sx: { mt: 1, minWidth: 200 } } }}
+        slotProps={{
+          paper: {
+            sx: {
+              mt: 1,
+              minWidth: 220,
+              background: "linear-gradient(180deg, rgba(20,26,41,0.98) 0%, rgba(14,18,29,0.98) 100%)",
+              backdropFilter: "blur(16px)",
+              border: "1px solid rgba(255,255,255,0.1)",
+              borderRadius: 3,
+            },
+          },
+        }}
       >
         {group.items.map((item) => (
           <MenuItem
@@ -82,6 +103,7 @@ const NavGroupButton = ({ group, active, onNavigate }) => {
               setAnchorEl(null);
               onNavigate(item.path);
             }}
+            sx={{ py: 1.1, fontWeight: 600, fontSize: "0.9rem" }}
           >
             {item.label}
           </MenuItem>
@@ -90,22 +112,6 @@ const NavGroupButton = ({ group, active, onNavigate }) => {
     </Box>
   );
 };
-
-const ActiveUnderline = () => (
-  <motion.div
-    layoutId="nav-underline"
-    transition={{ type: "spring", stiffness: 380, damping: 30 }}
-    style={{
-      position: "absolute",
-      bottom: 8,
-      left: 10,
-      right: 10,
-      height: 3,
-      borderRadius: 3,
-      background: "linear-gradient(90deg, #2f7dff, #ff7a1a)",
-    }}
-  />
-);
 
 const ResponsiveAppBar = () => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -136,7 +142,19 @@ const ResponsiveAppBar = () => {
             </Typography>
           </Box>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "none", lg: "flex" }, gap: 0 }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "none", lg: "block" } }} />
+
+          <Box
+            sx={{
+              display: { xs: "none", lg: "flex" },
+              alignItems: "center",
+              gap: 0.2,
+              p: 0.5,
+              borderRadius: 999,
+              background: "rgba(255,255,255,0.03)",
+              border: "1px solid rgba(255,255,255,0.07)",
+            }}
+          >
             {navGroups.map((group) => (
               <NavGroupButton
                 key={group.label}

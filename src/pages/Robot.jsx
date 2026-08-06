@@ -37,15 +37,15 @@ const evolution = [
   },
   {
     name: "Inhibitor",
-    desc: "Our first fully custom design, maximizing shot height and speed, with an intake added. It was a reliable shooter — but it couldn't hit the far zone, and its transfer mechanism was inconsistent.",
+    desc: "A custom-designed wooden robot optimized for high-speed, high-arc shooting with an integrated intake. The shooter was reliable, but its range was limited and the transfer mechanism needed further refinement.",
   },
   {
-    name: "Catalyst V1",
-    desc: "A new chassis, an effective intake and transfer, and a rotating hooded turret shooter capable of far-zone shots — the robot that won us the Inspire Award and a Winning Alliance at the Super Qualifier.",
+    name: "Catalyst 1.0",
+    desc: "A metal exoskeleton chassis, an integrated intake and transfer system, and a rotating hooded turret capable of far-zone shots — the robot that won us the Inspire Award and a Winning Alliance at the Super Qualifier.",
   },
   {
-    name: "Catalyst V2",
-    desc: "Swapped the wood chassis for metal and improved the vectored intake with new ramps — the version we took to the MO/KS State Championship and that qualified us for CRI.",
+    name: "Catalyst 2.0",
+    desc: "Built on the original design with a durable pocketed carbon-fiber chassis, active counter-rollers, and a redesigned vectored intake with greater range of motion — faster, more reliable, and simpler to maintain. The version we took to the MO/KS State Championship and the Chicago Robotics Invitational.",
   },
 ];
 
@@ -53,32 +53,32 @@ const subsystems = [
   {
     icon: <ConveyorBeltIcon />,
     title: "Intake",
-    desc: "A GoBilda 1150 RPM motor drives a 3-level intake: mecanum/gecko wheels feed boot wheels, which feed surgical tubing wheels. A compliance mechanism with stoppers keeps artifacts controlled, with custom 3D-printed side railings and chain & sprockets tying it together.",
+    desc: "A five-stage active intake runs at 2600 RPM on the first stage and 1500 RPM on the rest for reliable \"touch it, own it\" intaking. Molded vector wheels apply a sideways rolling force that centers artifacts, and a rotating intake arm gives adjustable compression and an improved center of mass.",
   },
   {
     icon: <SettingsIcon />,
     title: "Chassis",
-    desc: "A ⅛\" CNC aluminum 5052 exoskeleton with a square footprint that makes full parking easy. 104mm GripForce mecanum wheels run on 435 RPM motors in a 1:1 drive via parallel motors and pulleys with 5mm timing belts, and passive side ramps guide artifacts into the robot.",
+    desc: "A 2mm pocketed carbon-fiber exoskeleton, split into three side panels to minimize disassembly time during maintenance without giving up rigidity. A ratcheting power-transfer system shifts torque from the drivetrain motors to the lift using a spring-loaded clutch — no extra motor required.",
   },
   {
     icon: <TrackChangesIcon />,
     title: "Shooter / Turret",
-    desc: "Two 6000 RPM motors drive a double rhino wheel flywheel mounted on a rotating turret (232 RPM motor). An Axon MAX servo adjusts the hood angle, and a double helical turret gear (15:70 ratio, m=3) delivers both torque and precision.",
+    desc: "An inertial flywheel shooter with velocity-matched active counter-rollers cancels backspin so balls land cleanly in the goal. A bearing-stack servo turret with herringbone gears delivers ample torque, and a rack-and-pinion hood adjusts launch trajectory on very little current.",
   },
   {
     icon: <VisibilityIcon />,
-    title: "Sensors",
-    desc: "A Limelight 3A vision sensor rotates with the turret and reads AprilTags, while two 4-bar odometry pods and a Pinpoint localization system track the robot's exact position on the field.",
+    title: "Scarlet — Custom Pathing",
+    desc: "After maxing out our 12-ball auto on time with Pedro Pathing, we built Scarlet: it swaps Pedro's noisy derivative-of-error term for smoothed Pinpoint velocity, adds an anti-tip scalar, and fits a regression to braking distance — netting 9 extra seconds per auto.",
   },
   {
     icon: <PanToolIcon />,
-    title: "Stopper",
-    desc: "A Super Speed Servo-driven stopper retains and releases artifacts on demand — the last checkpoint between the transfer and the flywheel.",
+    title: "Bare Motor Drivetrain",
+    desc: "Every motor on the robot has its gearbox removed in favor of fully custom reductions, saving about 3.3 pounds across the bot while keeping the drivetrain compact.",
   },
   {
     icon: <CableIcon />,
-    title: "Wiring",
-    desc: "Zip ties, electrical tape, and woven wire tubing manage the turret wires, with 3D-printed dividers protecting wiring from the wheels.",
+    title: "Limelight Relocalization",
+    desc: "A command corrects the robot's pose against the AprilTag on the goal after every volley instead of resetting in the corner — this massively reduced misfires from turret/odometry drift on far shots.",
   },
 ];
 
@@ -94,9 +94,9 @@ const designSteps = [
 const programmingHighlights = [
   { title: "SolversLib", desc: "FTC Java library powering subsystem control, autonomous motor/servo control, and PedroPathing integration." },
   { title: "Custom Finite State Machine", desc: "Non-blocking, event-driven control of robot motion, scoring, and timing." },
-  { title: "PedroPathing + Pinpoint", desc: "Dual odometry drives smooth, curvature-continuous autonomous paths." },
-  { title: "PIDF Flywheel Control", desc: "Keeps shot power consistent no matter the battery or match conditions." },
-  { title: "Auto-Aiming Turret & Hood", desc: "Combines Pinpoint position with Limelight AprilTag correction to aim automatically." },
+  { title: "Scarlet Custom Pathing", desc: "Our own PID-based pathing system, built after Pedro Pathing capped our 12-ball auto on time." },
+  { title: "PIDF + Bang Bang Flywheel Control", desc: "Holds shot velocity steady while minimizing flywheel regeneration time between shots." },
+  { title: "ActiveArc", desc: "A tuned linear regression maps distance-to-goal to hood angle and launch velocity, so the turret can shoot accurately from anywhere on the field." },
   { title: "Robot-Centric Mecanum Drive", desc: "TeleOp driving without field-centric latency." },
 ];
 
@@ -132,6 +132,7 @@ const results = [
   { event: "League Tournament", robot: "Inhibitor", result: "1st — Sustain Award", avg: "101.17" },
   { event: "Eastern Missouri Super Qualifier", robot: "Catalyst", result: "1st — Inspire Award + Winning Alliance", avg: "135.5" },
   { event: "MO/KS State Championship", robot: "Catalyst V2", result: "1st — Sustain Award · 8th in Advancement Points · Qualified for CRI", avg: "Goal was 200" },
+  { event: "Chicago Robotics Invitational", robot: "Catalyst 2.0", result: "Qualified & Competed", avg: "vs. top teams nationwide" },
 ];
 
 const Robot = () => {

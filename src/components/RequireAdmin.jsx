@@ -6,7 +6,7 @@ import BackendNotice from "./BackendNotice";
 
 const RequireAdmin = ({ children }) => {
   const location = useLocation();
-  const { user, loading } = useAuth();
+  const { user, isAdmin, loading } = useAuth();
 
   if (!isSupabaseConfigured) {
     return <BackendNotice feature="The admin panel" />;
@@ -20,7 +20,7 @@ const RequireAdmin = ({ children }) => {
     );
   }
 
-  if (!user) {
+  if (!user || !isAdmin) {
     return <Navigate to="/admin/login" state={{ from: location }} replace />;
   }
 

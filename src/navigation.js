@@ -29,9 +29,17 @@ export const navGroups = [
     ],
   },
   {
+    label: "Rookie Support",
+    items: [
+      { label: "Webinars", path: "/webinars" },
+      { label: "Podcast", path: "/podcast" },
+    ],
+  },
+  {
     label: "Community",
     items: [
       { label: "Discord & Newsletter", path: "/community" },
+      { label: "Forum", path: "/forum" },
       { label: "2026–27 Season", path: "/season" },
     ],
   },

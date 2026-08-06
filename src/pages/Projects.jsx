@@ -10,6 +10,20 @@ import usePageTitle from "../hooks/usePageTitle";
 
 const projects = [
   {
+    title: "PFAS Sentinel",
+    tag: "SUSTAINABILITY",
+    img: "Images/pfasRevivePortfolio.jpg",
+    desc:
+      "Students in rural Ghana reported unsafe water and frequent illness, with no affordable way to test for contamination. We built a $20 smart PFAS filter with optical sensing and mobile alerts using a Yoon-Nelson logistic breakthrough model — reaching 97.4% accuracy with alerts sent in about 2.4 seconds, restoring over 95% of filter capacity, and reducing waste by up to 90%. It's a fully functioning prototype with sensors and filter system built in.",
+  },
+  {
+    title: "REVIVE-SCI",
+    tag: "HEALTHCARE",
+    img: "Images/pfasRevivePortfolio.jpg",
+    desc:
+      "Spinal cord injury hinders independent standing and gait for 15+ million people worldwide, and existing FES systems rely on unreliable signals from the same paralyzed muscle. REVIVE-SCI is an adaptive, electrode-based FES system that bypasses the spinal lesion entirely by rerouting EMG signals from a preserved region to an impaired one. We visited the Rehabilitation Institute of St. Louis and surveyed 42 spinal cord injury support group patients — 78% named walking as their greatest challenge, 54% were dissatisfied with current devices — and presented our proposal to a panel of 8 WashU professors, physicians, and clinicians.",
+  },
+  {
     title: "ActiStrap",
     tag: "PRODUCT DESIGN",
     img: "Images/actiStrap.jpg",

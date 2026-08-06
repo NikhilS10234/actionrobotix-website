@@ -13,10 +13,11 @@ import usePageTitle from "../hooks/usePageTitle";
 
 const bigStats = [
   { to: 37, label: "Outreach Events" },
-  { to: 7000, suffix: "+", label: "People Impacted" },
-  { to: 253, label: "Volunteer Hours" },
+  { to: 7200, suffix: "+", label: "People Impacted" },
+  { to: 450, suffix: "+", label: "Volunteer Hours" },
   { to: 18, label: "FLL Teams Started or Mentored" },
   { to: 24, label: "STEM Professionals Engaged" },
+  { to: 2500, prefix: "$", suffix: "+", label: "Raised in Grants & Fundraising" },
 ];
 
 const reach = [
@@ -51,7 +52,11 @@ const programs = [
   },
   {
     title: "Ghana Partnership",
-    desc: "Worked with the Smart Kids Ghana Association to bring hands-on STEM and robotics education to 40 students in underserved communities.",
+    desc: "In a pilot program with The Smart Kids Ghana Association, we brought virtual STEM and robotics education to 80+ students in underserved communities every Saturday for 3+ hours.",
+  },
+  {
+    title: "Founded STEM For All",
+    desc: "A student-run nonprofit founded to expand STEM access across the greater St. Louis area — 23+ outreach events, $2,000+ raised to launch new FLL/FTC teams, and 6+ school/organization partnerships.",
   },
   {
     title: "Team-Led Robotics Summer Camp",
@@ -75,7 +80,7 @@ const programs = [
   },
   {
     title: "Chess Cardinals Presentation",
-    desc: "~40 chess players and parents — connecting robotics and chess through strategy and logic.",
+    desc: "Presented FTC robotics to nearly 70 chess players and their parents at Chess Cardinals in Chesterfield — connecting robotics and chess through strategy and logic.",
   },
   {
     title: "Bastian Solutions Facility Tour",

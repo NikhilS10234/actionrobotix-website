@@ -31,6 +31,10 @@ import BlogPost from './pages/BlogPost';
 import Portfolios from './pages/Portfolios';
 import SubmitPortfolio from './pages/SubmitPortfolio';
 import Community from './pages/Community';
+import Webinars from './pages/Webinars';
+import Podcast from './pages/Podcast';
+import Forum from './pages/Forum';
+import ForumThread from './pages/ForumThread';
 import AdminLogin from './pages/admin/AdminLogin';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import ScrollProgress from './components/ScrollProgress';
@@ -97,6 +101,10 @@ const routers = createBrowserRouter([
           { path: "/portfolios", element: <Portfolios /> },
           { path: "/portfolios/submit", element: <SubmitPortfolio /> },
           { path: "/community", element: <Community /> },
+          { path: "/webinars", element: <Webinars /> },
+          { path: "/podcast", element: <Podcast /> },
+          { path: "/forum", element: <Forum /> },
+          { path: "/forum/:id", element: <ForumThread /> },
           { path: "/admin/login", element: <AdminLogin /> },
           { path: "/admin", element: <RequireAdmin><AdminDashboard /></RequireAdmin> },
           { path: "*", element: <NotFound /> },

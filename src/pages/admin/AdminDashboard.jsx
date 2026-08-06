@@ -7,10 +7,16 @@ import AdminBlogManager from "./AdminBlogManager";
 import AdminPortfolioManager from "./AdminPortfolioManager";
 import AdminNewsletterManager from "./AdminNewsletterManager";
 import AdminSettingsManager from "./AdminSettingsManager";
+import AdminWebinarManager from "./AdminWebinarManager";
+import AdminPodcastManager from "./AdminPodcastManager";
+import AdminForumManager from "./AdminForumManager";
 
 const TABS = [
   { label: "Blog", Component: AdminBlogManager },
   { label: "Portfolios", Component: AdminPortfolioManager },
+  { label: "Webinars", Component: AdminWebinarManager },
+  { label: "Podcast", Component: AdminPodcastManager },
+  { label: "Forum", Component: AdminForumManager },
   { label: "Newsletter", Component: AdminNewsletterManager },
   { label: "Site Settings", Component: AdminSettingsManager },
 ];
