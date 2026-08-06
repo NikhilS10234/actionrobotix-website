@@ -45,7 +45,7 @@ const evolution = [
   },
   {
     name: "Catalyst 2.0",
-    desc: "Built on the original design with a durable pocketed carbon-fiber chassis, active counter-rollers, and a redesigned vectored intake with greater range of motion — faster, more reliable, and simpler to maintain. The version we took to the MO/KS State Championship and the Chicago Robotics Invitational.",
+    desc: "A refined version of Catalyst, built to be faster, more reliable, and simpler to maintain. The version we took to the MO/KS State Championship and the Chicago Robotics Invitational.",
   },
 ];
 
@@ -53,32 +53,32 @@ const subsystems = [
   {
     icon: <ConveyorBeltIcon />,
     title: "Intake",
-    desc: "A five-stage active intake runs at 2600 RPM on the first stage and 1500 RPM on the rest for reliable \"touch it, own it\" intaking. Molded vector wheels apply a sideways rolling force that centers artifacts, and a rotating intake arm gives adjustable compression and an improved center of mass.",
+    desc: "A multi-stage active intake with a compliance mechanism keeps artifacts controlled from pickup through transfer.",
   },
   {
     icon: <SettingsIcon />,
     title: "Chassis",
-    desc: "A 2mm pocketed carbon-fiber exoskeleton, split into three side panels to minimize disassembly time during maintenance without giving up rigidity. A ratcheting power-transfer system shifts torque from the drivetrain motors to the lift using a spring-loaded clutch — no extra motor required.",
+    desc: "A lightweight custom exoskeleton with a square footprint that makes full parking easy, with passive side ramps guiding artifacts into the robot.",
   },
   {
     icon: <TrackChangesIcon />,
     title: "Shooter / Turret",
-    desc: "An inertial flywheel shooter with velocity-matched active counter-rollers cancels backspin so balls land cleanly in the goal. A bearing-stack servo turret with herringbone gears delivers ample torque, and a rack-and-pinion hood adjusts launch trajectory on very little current.",
+    desc: "A flywheel shooter mounted on a rotating turret with an adjustable hood, built for consistent shots from anywhere on the field.",
   },
   {
     icon: <VisibilityIcon />,
-    title: "Scarlet — Custom Pathing",
-    desc: "After maxing out our 12-ball auto on time with Pedro Pathing, we built Scarlet: it swaps Pedro's noisy derivative-of-error term for smoothed Pinpoint velocity, adds an anti-tip scalar, and fits a regression to braking distance — netting 9 extra seconds per auto.",
+    title: "Vision & Localization",
+    desc: "A Limelight vision sensor rotates with the turret and reads AprilTags, working alongside odometry to track the robot's position on the field.",
   },
   {
     icon: <PanToolIcon />,
-    title: "Bare Motor Drivetrain",
-    desc: "Every motor on the robot has its gearbox removed in favor of fully custom reductions, saving about 3.3 pounds across the bot while keeping the drivetrain compact.",
+    title: "Stopper",
+    desc: "A servo-driven stopper retains and releases artifacts on demand — the last checkpoint between the transfer and the flywheel.",
   },
   {
     icon: <CableIcon />,
-    title: "Limelight Relocalization",
-    desc: "A command corrects the robot's pose against the AprilTag on the goal after every volley instead of resetting in the corner — this massively reduced misfires from turret/odometry drift on far shots.",
+    title: "Wiring",
+    desc: "Careful cable management keeps the turret's wiring protected and serviceable between matches.",
   },
 ];
 
@@ -94,9 +94,9 @@ const designSteps = [
 const programmingHighlights = [
   { title: "SolversLib", desc: "FTC Java library powering subsystem control, autonomous motor/servo control, and PedroPathing integration." },
   { title: "Custom Finite State Machine", desc: "Non-blocking, event-driven control of robot motion, scoring, and timing." },
-  { title: "Scarlet Custom Pathing", desc: "Our own PID-based pathing system, built after Pedro Pathing capped our 12-ball auto on time." },
-  { title: "PIDF + Bang Bang Flywheel Control", desc: "Holds shot velocity steady while minimizing flywheel regeneration time between shots." },
-  { title: "ActiveArc", desc: "A tuned linear regression maps distance-to-goal to hood angle and launch velocity, so the turret can shoot accurately from anywhere on the field." },
+  { title: "Custom Autonomous Pathing", desc: "Smooth, curvature-continuous autonomous paths tuned specifically for our robot." },
+  { title: "PIDF Flywheel Control", desc: "Keeps shot power consistent no matter the battery or match conditions." },
+  { title: "Auto-Aiming Turret & Hood", desc: "Combines odometry with Limelight AprilTag correction to aim automatically." },
   { title: "Robot-Centric Mecanum Drive", desc: "TeleOp driving without field-centric latency." },
 ];
 

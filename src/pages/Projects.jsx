@@ -10,39 +10,25 @@ import usePageTitle from "../hooks/usePageTitle";
 
 const projects = [
   {
-    title: "PFAS Sentinel",
-    tag: "SUSTAINABILITY",
-    img: "Images/pfasRevivePortfolio.jpg",
+    title: "Inspire Award — 1st Place",
+    tag: "FTC ACHIEVEMENT",
+    img: "Images/AR-Regional-Championship-2024.jpg",
     desc:
-      "Students in rural Ghana reported unsafe water and frequent illness, with no affordable way to test for contamination. We built a $20 smart PFAS filter with optical sensing and mobile alerts using a Yoon-Nelson logistic breakthrough model — reaching 97.4% accuracy with alerts sent in about 2.4 seconds, restoring over 95% of filter capacity, and reducing waste by up to 90%. It's a fully functioning prototype with sensors and filter system built in.",
+      "Our team took home 1st place in the Inspire Award — FIRST's highest honor — at the Eastern Missouri Super Qualifier, recognizing our robot performance, outreach, and team culture together.",
   },
   {
-    title: "REVIVE-SCI",
-    tag: "HEALTHCARE",
-    img: "Images/pfasRevivePortfolio.jpg",
+    title: "Chicago Robotics Invitational",
+    tag: "FTC COMPETITION",
+    img: "Images/ftcComp.jpg",
     desc:
-      "Spinal cord injury hinders independent standing and gait for 15+ million people worldwide, and existing FES systems rely on unreliable signals from the same paralyzed muscle. REVIVE-SCI is an adaptive, electrode-based FES system that bypasses the spinal lesion entirely by rerouting EMG signals from a preserved region to an impaired one. We visited the Rehabilitation Institute of St. Louis and surveyed 42 spinal cord injury support group patients — 78% named walking as their greatest challenge, 54% were dissatisfied with current devices — and presented our proposal to a panel of 8 WashU professors, physicians, and clinicians.",
+      "After qualifying at the MO/KS State Championship, we traveled to compete at the Chicago Robotics Invitational against some of the best FTC teams in the country.",
   },
   {
-    title: "ActiStrap",
-    tag: "PRODUCT DESIGN",
-    img: "Images/actiStrap.jpg",
+    title: "Catalyst 2.0 in the Pits",
+    tag: "FTC ROBOT",
+    img: "Images/ftcRobot.jpeg",
     desc:
-      "A cutting-edge measuring device for shoe wearers and companies, ensuring accurate size estimates for a perfect fit. This project earned us a board meeting with Fortune 500 officials.",
-  },
-  {
-    title: "Top Tennis",
-    tag: "SPORTS TECH",
-    img: "Images/TopTennisPic.png",
-    desc:
-      "An indoor tennis simulator that combines a ball machine with simulation projection, allowing players to enhance their skills anytime and anywhere.",
-  },
-  {
-    title: "Road Turbine",
-    tag: "CLEAN ENERGY",
-    img: "Images/roadTurbine.jpg",
-    desc:
-      "A solution to harness the kinetic energy of vehicles moving on the road and convert it into usable electricity.",
+      "Our third robot iteration of the season — built, tested, and iterated on throughout league play, superqualifiers, states, and CRI.",
   },
 ];
 
@@ -53,9 +39,9 @@ const Projects = () => {
   return (
     <PageTransition>
       <PageHero
-        eyebrow="ENGINEERING BEYOND THE FIELD"
-        title="Our Projects"
-        subtitle="Real-world solutions our team has envisioned, designed, and made practical — emphasizing efficiency, feasibility, and impact."
+        eyebrow="ON THE FIELD"
+        title="FTC Season Highlights"
+        subtitle="Moments from our 2025–26 DECODE season — from the Inspire Award to the Chicago Robotics Invitational."
       />
 
       <Box sx={{ ...sectionSx, pb: { xs: 10, md: 14 } }}>

@@ -28,10 +28,10 @@ const reach = [
 
 const photoEvents = [
   {
-    title: "FLL Team Mentoring",
+    title: "Boeing STEAM & Space Day",
     desc:
-      "Action Robotix regularly engages with the community through coaching and mentoring FLL teams — 18 FLL teams started or mentored to date, including our feeder teams Action Robotics-FLL, Eager Eagles, Golden Falcons, and Control-Alt-Delete.",
-    img: "Images/FLLMentor.jpeg",
+      "2,000+ attendees got hands-on robot driving time with our competition robot, as we shared robotics and STEM with families and enthusiasts of all ages.",
+    img: "Images/RandomRobotInAction.jpg",
   },
   {
     title: "Magic House Star Wars STEM Night",
