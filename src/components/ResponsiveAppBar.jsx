@@ -38,7 +38,7 @@ const pillButtonSx = (active) => ({
   py: 1,
   px: 2,
   minWidth: "auto",
-  borderRadius: 999,
+  borderRadius: 2,
   whiteSpace: "nowrap",
   "&:hover": { backgroundColor: active ? "transparent" : "rgba(255,255,255,0.06)" },
 });
@@ -50,7 +50,7 @@ const ActivePill = () => (
     style={{
       position: "absolute",
       inset: 0,
-      borderRadius: 999,
+      borderRadius: 16,
       background: "linear-gradient(135deg, #2f7dff 0%, #1a5ad9 100%)",
       boxShadow: "0 6px 20px rgba(47,125,255,0.45)",
     }}
@@ -152,7 +152,7 @@ const ResponsiveAppBar = () => {
               alignItems: "center",
               gap: 0.2,
               p: 0.5,
-              borderRadius: 999,
+              borderRadius: 2.5,
               background: "rgba(255,255,255,0.03)",
               border: "1px solid rgba(255,255,255,0.07)",
             }}

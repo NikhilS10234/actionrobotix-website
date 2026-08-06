@@ -9,7 +9,7 @@ const theme = createTheme({
     text: { primary: "#eef1f8", secondary: "#9aa5ba" },
     divider: "rgba(255,255,255,0.08)",
   },
-  shape: { borderRadius: 16 },
+  shape: { borderRadius: 8 },
   typography: {
     fontFamily: '"Inter", "Segoe UI", sans-serif',
     h1: { fontFamily: '"Sora", sans-serif', fontWeight: 800, letterSpacing: "-0.02em" },
@@ -23,7 +23,7 @@ const theme = createTheme({
   components: {
     MuiButton: {
       styleOverrides: {
-        root: { borderRadius: 999, padding: "10px 26px" },
+        root: { borderRadius: 10, padding: "10px 26px" },
         containedPrimary: {
           background: "linear-gradient(135deg, #2f7dff 0%, #1a5ad9 100%)",
           boxShadow: "0 8px 24px rgba(47,125,255,0.35)",
