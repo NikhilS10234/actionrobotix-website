@@ -16,6 +16,8 @@ import MenuItem from "@mui/material/MenuItem";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import LoginIcon from "@mui/icons-material/Login";
+import Tooltip from "@mui/material/Tooltip";
 import { useLocation, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { navGroups } from "../navigation";
@@ -165,10 +167,20 @@ const ResponsiveAppBar = () => {
             ))}
           </Box>
 
-          <Box sx={{ display: { xs: "none", lg: "block" }, ml: 1 }}>
+          <Box sx={{ display: { xs: "none", lg: "flex" }, alignItems: "center", ml: 1, gap: 0.5 }}>
             <Button variant="contained" color="secondary" onClick={() => goTo("/supportus")}>
               Support Us
             </Button>
+            <Tooltip title="Team Login">
+              <IconButton
+                aria-label="Team login"
+                onClick={() => goTo("/admin/login")}
+                size="small"
+                sx={{ color: "text.secondary", "&:hover": { color: "text.primary" } }}
+              >
+                <LoginIcon fontSize="small" />
+              </IconButton>
+            </Tooltip>
           </Box>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", lg: "none" }, justifyContent: "flex-end" }}>
@@ -235,9 +247,12 @@ const ResponsiveAppBar = () => {
               </Box>
             );
           })}
-          <Box sx={{ px: 3, pt: 2 }}>
+          <Box sx={{ px: 3, pt: 2, display: "flex", flexDirection: "column", gap: 1 }}>
             <Button fullWidth variant="contained" color="secondary" onClick={() => goTo("/supportus")}>
               Support Us
+            </Button>
+            <Button fullWidth variant="text" size="small" startIcon={<LoginIcon fontSize="small" />} onClick={() => goTo("/admin/login")} sx={{ color: "text.secondary" }}>
+              Team Login
             </Button>
           </Box>
         </List>
