@@ -12,21 +12,21 @@ const projects = [
   {
     title: "Inspire Award — 1st Place",
     tag: "FTC ACHIEVEMENT",
-    img: "Images/AR-Regional-Championship-2024.jpg",
+    img: "Images/SuperQualsPic.webp",
     desc:
       "Our team took home 1st place in the Inspire Award — FIRST's highest honor — at the Eastern Missouri Super Qualifier, recognizing our robot performance, outreach, and team culture together.",
   },
   {
     title: "Chicago Robotics Invitational",
     tag: "FTC COMPETITION",
-    img: "Images/ftcComp.jpg",
+    img: "Images/CRIPic.webp",
     desc:
       "After qualifying at the MO/KS State Championship, we traveled to compete at the Chicago Robotics Invitational against some of the best FTC teams in the country.",
   },
   {
     title: "Catalyst 2.0 in the Pits",
     tag: "FTC ROBOT",
-    img: "Images/ftcRobot.jpeg",
+    img: "Images/PitPic.webp",
     desc:
       "Our third robot iteration of the season — built, tested, and iterated on throughout league play, superqualifiers, states, and CRI.",
   },
