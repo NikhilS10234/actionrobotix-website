@@ -1,10 +1,10 @@
 import { Box, Container, Grid2, Typography, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import PageHero from "./components/PageHero";
-import Reveal from "./components/Reveal";
-import PageTransition from "./components/PageTransition";
-import { sectionSx } from "./components/styles";
-import usePageTitle from "./hooks/usePageTitle";
+import PageHero from "../components/PageHero";
+import Reveal from "../components/Reveal";
+import PageTransition from "../components/PageTransition";
+import { sectionSx } from "../components/styles";
+import usePageTitle from "../hooks/usePageTitle";
 
 const FRC = () => {
   const navigate = useNavigate();

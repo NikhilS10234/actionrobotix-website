@@ -1,11 +1,11 @@
 import { Box, Container, Grid2, Typography, Button, Chip } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import PageHero from "./components/PageHero";
-import Reveal from "./components/Reveal";
-import PageTransition from "./components/PageTransition";
-import { glassCardSx, sectionSx } from "./components/styles";
-import usePageTitle from "./hooks/usePageTitle";
+import PageHero from "../components/PageHero";
+import Reveal from "../components/Reveal";
+import PageTransition from "../components/PageTransition";
+import { glassCardSx, sectionSx } from "../components/styles";
+import usePageTitle from "../hooks/usePageTitle";
 
 const programs = [
   {

@@ -9,11 +9,11 @@ import SchoolIcon from "@mui/icons-material/School";
 import GroupsIcon from "@mui/icons-material/Groups";
 import EmojiObjectsIcon from "@mui/icons-material/EmojiObjects";
 import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
-import PageHero from "./components/PageHero";
-import Reveal from "./components/Reveal";
-import PageTransition from "./components/PageTransition";
-import { glassCardSx, sectionSx } from "./components/styles";
-import usePageTitle from "./hooks/usePageTitle";
+import PageHero from "../components/PageHero";
+import Reveal from "../components/Reveal";
+import PageTransition from "../components/PageTransition";
+import { glassCardSx, sectionSx } from "../components/styles";
+import usePageTitle from "../hooks/usePageTitle";
 
 const benefits = [
   { icon: <SchoolIcon />, title: "Real Engineering Skills", desc: "Hands-on CAD, fabrication, and programming experience you can't get from a textbook." },

@@ -4,11 +4,11 @@ import CloseIcon from "@mui/icons-material/Close";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { motion, AnimatePresence } from "framer-motion";
-import PageHero from "./components/PageHero";
-import Reveal from "./components/Reveal";
-import PageTransition from "./components/PageTransition";
-import { sectionSx } from "./components/styles";
-import usePageTitle from "./hooks/usePageTitle";
+import PageHero from "../components/PageHero";
+import Reveal from "../components/Reveal";
+import PageTransition from "../components/PageTransition";
+import { sectionSx } from "../components/styles";
+import usePageTitle from "../hooks/usePageTitle";
 
 const images = [
   { src: "Images/ftcComp.jpg", alt: "Action Robotix at FTC competition", category: "Competitions" },

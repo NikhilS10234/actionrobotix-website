@@ -5,12 +5,12 @@ import BuildIcon from "@mui/icons-material/Build";
 import CodeIcon from "@mui/icons-material/Code";
 import CampaignIcon from "@mui/icons-material/Campaign";
 import SportsIcon from "@mui/icons-material/Sports";
-import PageHero from "./components/PageHero";
-import Reveal from "./components/Reveal";
-import Counter from "./components/Counter";
-import PageTransition from "./components/PageTransition";
-import { glassCardSx, sectionSx } from "./components/styles";
-import usePageTitle from "./hooks/usePageTitle";
+import PageHero from "../components/PageHero";
+import Reveal from "../components/Reveal";
+import Counter from "../components/Counter";
+import PageTransition from "../components/PageTransition";
+import { glassCardSx, sectionSx } from "../components/styles";
+import usePageTitle from "../hooks/usePageTitle";
 
 const subteams = [
   {

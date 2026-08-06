@@ -4,12 +4,12 @@ import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
 import GroupsIcon from "@mui/icons-material/Groups";
 import VideoLibraryIcon from "@mui/icons-material/VideoLibrary";
 import PublicIcon from "@mui/icons-material/Public";
-import PageHero from "./components/PageHero";
-import Reveal from "./components/Reveal";
-import Counter from "./components/Counter";
-import PageTransition from "./components/PageTransition";
-import { glassCardSx, sectionSx } from "./components/styles";
-import usePageTitle from "./hooks/usePageTitle";
+import PageHero from "../components/PageHero";
+import Reveal from "../components/Reveal";
+import Counter from "../components/Counter";
+import PageTransition from "../components/PageTransition";
+import { glassCardSx, sectionSx } from "../components/styles";
+import usePageTitle from "../hooks/usePageTitle";
 
 const bigStats = [
   { to: 37, label: "Outreach Events" },

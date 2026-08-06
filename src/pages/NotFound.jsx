@@ -3,9 +3,9 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import HomeIcon from "@mui/icons-material/Home";
 import PrecisionManufacturingIcon from "@mui/icons-material/PrecisionManufacturing";
-import GlowBackground from "./components/GlowBackground";
-import PageTransition from "./components/PageTransition";
-import usePageTitle from "./hooks/usePageTitle";
+import GlowBackground from "../components/GlowBackground";
+import PageTransition from "../components/PageTransition";
+import usePageTitle from "../hooks/usePageTitle";
 
 const NotFound = () => {
   const navigate = useNavigate();

@@ -2,11 +2,11 @@ import { useState } from "react";
 import { Box, Container, Grid2, Typography, Modal, IconButton, Chip } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import { motion, AnimatePresence } from "framer-motion";
-import PageHero from "./components/PageHero";
-import Reveal from "./components/Reveal";
-import PageTransition from "./components/PageTransition";
-import { glassCardSx, sectionSx } from "./components/styles";
-import usePageTitle from "./hooks/usePageTitle";
+import PageHero from "../components/PageHero";
+import Reveal from "../components/Reveal";
+import PageTransition from "../components/PageTransition";
+import { glassCardSx, sectionSx } from "../components/styles";
+import usePageTitle from "../hooks/usePageTitle";
 
 const projects = [
   {

@@ -1,7 +1,7 @@
 import './App.css';
-import ResponsiveAppBar from './ResponsiveAppBar';
-import MainApp from './MainApp';
-import AboutUs from './AboutUs';
+import ResponsiveAppBar from './components/ResponsiveAppBar';
+import MainApp from './pages/MainApp';
+import AboutUs from './pages/AboutUs';
 import { ThemeProvider, CssBaseline, Box } from '@mui/material';
 import { MotionConfig } from 'framer-motion';
 import theme from './theme';
@@ -11,24 +11,34 @@ import {
   createBrowserRouter,
   RouterProvider
 } from "react-router-dom";
-import FIRST from './FIRST';
-import Projects from './Projects';
-import Outreach from './Outreach';
-import SupportUs from './SupportUs';
-import ContactUs from './ContactUs';
-import Footer from './Footer';
-import FTC from './FTC';
-import FRC from './FRC';
-import FLL from './FLL';
-import JoinUs from './JoinUs';
-import Gallery from './Gallery';
-import Robot from './Robot';
-import History from './History';
-import NotFound from './NotFound';
+import FIRST from './pages/FIRST';
+import Projects from './pages/Projects';
+import Outreach from './pages/Outreach';
+import SupportUs from './pages/SupportUs';
+import ContactUs from './pages/ContactUs';
+import Footer from './components/Footer';
+import FTC from './pages/FTC';
+import FRC from './pages/FRC';
+import FLL from './pages/FLL';
+import JoinUs from './pages/JoinUs';
+import Gallery from './pages/Gallery';
+import Robot from './pages/Robot';
+import History from './pages/History';
+import NotFound from './pages/NotFound';
+import Season from './pages/Season';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
+import Portfolios from './pages/Portfolios';
+import SubmitPortfolio from './pages/SubmitPortfolio';
+import Community from './pages/Community';
+import AdminLogin from './pages/admin/AdminLogin';
+import AdminDashboard from './pages/admin/AdminDashboard';
 import ScrollProgress from './components/ScrollProgress';
 import BackToTop from './components/BackToTop';
 import CommandPalette from './components/CommandPalette';
 import ScrollToTop from './components/ScrollToTop';
+import RequireAdmin from './components/RequireAdmin';
+import { AuthProvider } from './context/AuthContext';
 
 const Layout = () => (
   <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', overflowX: 'hidden' }}>
@@ -81,6 +91,14 @@ const routers = createBrowserRouter([
           { path: "/ftc", element: <FTC /> },
           { path: "/frc", element: <FRC /> },
           { path: "/fll", element: <FLL /> },
+          { path: "/season", element: <Season /> },
+          { path: "/blog", element: <Blog /> },
+          { path: "/blog/:slug", element: <BlogPost /> },
+          { path: "/portfolios", element: <Portfolios /> },
+          { path: "/portfolios/submit", element: <SubmitPortfolio /> },
+          { path: "/community", element: <Community /> },
+          { path: "/admin/login", element: <AdminLogin /> },
+          { path: "/admin", element: <RequireAdmin><AdminDashboard /></RequireAdmin> },
           { path: "*", element: <NotFound /> },
     ]
   }
@@ -92,7 +110,9 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <MotionConfig reducedMotion="user">
-        <RouterProvider router={routers} />
+        <AuthProvider>
+          <RouterProvider router={routers} />
+        </AuthProvider>
       </MotionConfig>
     </ThemeProvider>
   );

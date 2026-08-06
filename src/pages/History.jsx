@@ -6,12 +6,12 @@ import CodeIcon from "@mui/icons-material/Code";
 import PaidIcon from "@mui/icons-material/Paid";
 import PublicIcon from "@mui/icons-material/Public";
 import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
-import PageHero from "./components/PageHero";
-import Reveal from "./components/Reveal";
-import Counter from "./components/Counter";
-import PageTransition from "./components/PageTransition";
-import { glassCardSx, sectionSx } from "./components/styles";
-import usePageTitle from "./hooks/usePageTitle";
+import PageHero from "../components/PageHero";
+import Reveal from "../components/Reveal";
+import Counter from "../components/Counter";
+import PageTransition from "../components/PageTransition";
+import { glassCardSx, sectionSx } from "../components/styles";
+import usePageTitle from "../hooks/usePageTitle";
 
 const goals = [
   "Coordinate and share FIRST and STEM within the community in as many ways as possible",

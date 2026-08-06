@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Box, Container, Grid2, Typography, IconButton, Divider, Link as MLink, TextField, Button } from "@mui/material";
+import { Box, Container, Grid2, Typography, IconButton, Divider, Link as MLink, TextField, Button, Snackbar, Alert } from "@mui/material";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import XIcon from "@mui/icons-material/X";
@@ -7,9 +7,11 @@ import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { useNavigate } from "react-router-dom";
-import { navPages } from "./navigation";
+import { footerLinks } from "../navigation";
+import { subscribeToNewsletter } from "../api/newsletter";
+import { isSupabaseConfigured } from "../lib/supabaseClient";
 
-const quickLinks = navPages.filter((p) => p.path !== "/");
+const quickLinks = footerLinks;
 
 const socials = [
   { icon: <InstagramIcon />, href: "https://www.instagram.com/ActionRobotix", label: "Instagram" },
@@ -20,14 +22,32 @@ const socials = [
 const Footer = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
+  const [toast, setToast] = useState(null);
 
-  const handleSubscribe = (e) => {
+  const handleSubscribe = async (e) => {
     e.preventDefault();
     if (!/^\S+@\S+\.\S+$/.test(email)) return;
-    const subject = encodeURIComponent("Newsletter Signup");
-    const body = encodeURIComponent(`Please add me to the Action Robotix mailing list.\n\nEmail: ${email}`);
-    window.location.href = `mailto:actionrobotix@gmail.com?subject=${subject}&body=${body}`;
-    setEmail("");
+
+    if (!isSupabaseConfigured) {
+      const subject = encodeURIComponent("Newsletter Signup");
+      const body = encodeURIComponent(`Please add me to the Action Robotix mailing list.\n\nEmail: ${email}`);
+      window.location.href = `mailto:actionrobotix@gmail.com?subject=${subject}&body=${body}`;
+      setEmail("");
+      return;
+    }
+
+    try {
+      await subscribeToNewsletter(email);
+      setToast({ severity: "success", message: "You're subscribed — thanks for joining!" });
+      setEmail("");
+    } catch (err) {
+      if (err.code === "23505") {
+        setToast({ severity: "info", message: "That email is already subscribed." });
+        setEmail("");
+      } else {
+        setToast({ severity: "error", message: "Something went wrong — please try again." });
+      }
+    }
   };
 
   return (
@@ -160,10 +180,28 @@ const Footer = () => {
 
         <Divider sx={{ my: 4, borderColor: "rgba(255,255,255,0.08)" }} />
 
-        <Typography variant="body2" sx={{ color: "text.secondary", textAlign: "center" }}>
-          © {new Date().getFullYear()} Action Robotix · FTC Team 25779. Built with pride in St. Louis.
-        </Typography>
+        <Box sx={{ display: "flex", flexDirection: { xs: "column", sm: "row" }, alignItems: "center", justifyContent: "center", gap: { xs: 0.5, sm: 1.5 } }}>
+          <Typography variant="body2" sx={{ color: "text.secondary", textAlign: "center" }}>
+            © {new Date().getFullYear()} Action Robotix · FTC Team 25779. Built with pride in St. Louis.
+          </Typography>
+          <MLink
+            component="button"
+            onClick={() => navigate("/admin/login")}
+            underline="hover"
+            sx={{ color: "text.secondary", fontSize: "0.8rem", "&:hover": { color: "primary.light" } }}
+          >
+            Team Login
+          </MLink>
+        </Box>
       </Container>
+
+      <Snackbar open={Boolean(toast)} autoHideDuration={5000} onClose={() => setToast(null)} anchorOrigin={{ vertical: "bottom", horizontal: "center" }}>
+        {toast && (
+          <Alert onClose={() => setToast(null)} severity={toast.severity} variant="filled" sx={{ width: "100%" }}>
+            {toast.message}
+          </Alert>
+        )}
+      </Snackbar>
     </Box>
   );
 };

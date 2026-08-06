@@ -18,12 +18,12 @@ import ConstructionIcon from "@mui/icons-material/Construction";
 import SportsScoreIcon from "@mui/icons-material/SportsScore";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import MilitaryTechIcon from "@mui/icons-material/MilitaryTech";
-import PageHero from "./components/PageHero";
-import Reveal from "./components/Reveal";
-import PageTransition from "./components/PageTransition";
-import RobotScene from "./components/RobotScene";
-import { glassCardSx, sectionSx } from "./components/styles";
-import usePageTitle from "./hooks/usePageTitle";
+import PageHero from "../components/PageHero";
+import Reveal from "../components/Reveal";
+import PageTransition from "../components/PageTransition";
+import RobotScene from "../components/RobotScene";
+import { glassCardSx, sectionSx } from "../components/styles";
+import usePageTitle from "../hooks/usePageTitle";
 
 const pillars = [
   { icon: <BuildIcon />, title: "Design & Build", desc: "CAD design, fabrication, and iteration on our competition robot each season." },

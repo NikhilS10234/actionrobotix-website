@@ -11,15 +11,15 @@ import SchoolIcon from "@mui/icons-material/School";
 import EmojiObjectsIcon from "@mui/icons-material/EmojiObjects";
 import ViewInArIcon from "@mui/icons-material/ViewInAr";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
-import GlowBackground from "./components/GlowBackground";
-import Reveal from "./components/Reveal";
-import Counter from "./components/Counter";
-import PageTransition from "./components/PageTransition";
-import TiltCard from "./components/TiltCard";
-import Marquee from "./components/Marquee";
-import RobotScene from "./components/RobotScene";
-import { glassCardSx, sectionSx } from "./components/styles";
-import usePageTitle from "./hooks/usePageTitle";
+import GlowBackground from "../components/GlowBackground";
+import Reveal from "../components/Reveal";
+import Counter from "../components/Counter";
+import PageTransition from "../components/PageTransition";
+import TiltCard from "../components/TiltCard";
+import Marquee from "../components/Marquee";
+import RobotScene from "../components/RobotScene";
+import { glassCardSx, sectionSx } from "../components/styles";
+import usePageTitle from "../hooks/usePageTitle";
 
 const marqueeItems = [
   "FOUNDED 2024",

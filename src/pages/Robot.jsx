@@ -23,12 +23,12 @@ import PanToolIcon from "@mui/icons-material/PanTool";
 import CableIcon from "@mui/icons-material/Cable";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import HistoryIcon from "@mui/icons-material/History";
-import PageHero from "./components/PageHero";
-import Reveal from "./components/Reveal";
-import PageTransition from "./components/PageTransition";
-import RobotScene from "./components/RobotScene";
-import { glassCardSx, sectionSx } from "./components/styles";
-import usePageTitle from "./hooks/usePageTitle";
+import PageHero from "../components/PageHero";
+import Reveal from "../components/Reveal";
+import PageTransition from "../components/PageTransition";
+import RobotScene from "../components/RobotScene";
+import { glassCardSx, sectionSx } from "../components/styles";
+import usePageTitle from "../hooks/usePageTitle";
 
 const evolution = [
   {

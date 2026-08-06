@@ -1,14 +1,50 @@
-export const navPages = [
+export const navGroups = [
   { label: "Home", path: "/" },
-  { label: "About", path: "/aboutus" },
-  { label: "Robot", path: "/robot" },
-  { label: "History", path: "/history" },
-  { label: "FIRST", path: "/first" },
-  { label: "Projects", path: "/projects" },
-  { label: "Gallery", path: "/gallery" },
-  { label: "Outreach", path: "/outreach" },
-  { label: "Join", path: "/join" },
+  {
+    label: "Team",
+    items: [
+      { label: "About Us", path: "/aboutus" },
+      { label: "History", path: "/history" },
+      { label: "Robot", path: "/robot" },
+      { label: "Gallery", path: "/gallery" },
+    ],
+  },
+  {
+    label: "Programs",
+    items: [
+      { label: "FIRST", path: "/first" },
+      { label: "FTC", path: "/ftc" },
+      { label: "FRC", path: "/frc" },
+      { label: "FLL", path: "/fll" },
+    ],
+  },
+  {
+    label: "Get Involved",
+    items: [
+      { label: "Projects", path: "/projects" },
+      { label: "Outreach", path: "/outreach" },
+      { label: "Join Us", path: "/join" },
+      { label: "Portfolio Database", path: "/portfolios" },
+      { label: "Blog", path: "/blog" },
+    ],
+  },
+  {
+    label: "Community",
+    items: [
+      { label: "Discord & Newsletter", path: "/community" },
+      { label: "2026–27 Season", path: "/season" },
+    ],
+  },
   { label: "Contact", path: "/contactus" },
 ];
 
-export const allPages = [...navPages, { label: "Support Us", path: "/supportus" }];
+// Flat list of every leaf link, in nav order, for the footer's Quick Links column.
+export const footerLinks = navGroups.flatMap((group) =>
+  group.items ? group.items : group.path === "/" ? [] : [{ label: group.label, path: group.path }]
+);
+
+export const allPages = [
+  { label: "Home", path: "/" },
+  ...footerLinks,
+  { label: "Support Us", path: "/supportus" },
+];

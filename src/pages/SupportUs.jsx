@@ -6,11 +6,11 @@ import HandshakeIcon from "@mui/icons-material/Handshake";
 import SchoolIcon from "@mui/icons-material/School";
 import PublicIcon from "@mui/icons-material/Public";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import PageHero from "./components/PageHero";
-import Reveal from "./components/Reveal";
-import PageTransition from "./components/PageTransition";
-import { glassCardSx, sectionSx } from "./components/styles";
-import usePageTitle from "./hooks/usePageTitle";
+import PageHero from "../components/PageHero";
+import Reveal from "../components/Reveal";
+import PageTransition from "../components/PageTransition";
+import { glassCardSx, sectionSx } from "../components/styles";
+import usePageTitle from "../hooks/usePageTitle";
 
 const reasons = [
   { icon: <SchoolIcon />, title: "STEM Access", desc: "Your support helps keep robotics accessible to students across the St. Louis area." },
