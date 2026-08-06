@@ -71,9 +71,9 @@ const projectPreviews = [
 ];
 
 const heroImages = [
-  "Images/RandomRobotInAction.jpg",
-  "Images/AR-Regional-Championship-2024.jpg",
-  "Images/sunshineInvational.jpg",
+  "Images/SuperQualsPic.webp",
+  "Images/CRIPic.webp",
+  "Images/PitPic.webp",
 ];
 
 const MainApp = () => {
