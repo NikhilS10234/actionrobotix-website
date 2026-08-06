@@ -1,5 +1,4 @@
 import { Box, Container, Grid2, Typography, Chip } from "@mui/material";
-import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import BrushIcon from "@mui/icons-material/Brush";
 import BuildIcon from "@mui/icons-material/Build";
 import CodeIcon from "@mui/icons-material/Code";
@@ -57,42 +56,6 @@ const coaches = [
   { name: "Ganesh", role: "Head Coach" },
   { name: "Krish", role: "Design Coach" },
   { name: "Prakash", role: "Build Coach" },
-];
-
-const mentors = [
-  { name: "Amit Jha", role: "Programming Mentor", background: "PhD, Senior Software Engineer at Missouri S&T — laid the groundwork for our software architecture and debugging practices." },
-  { name: "Dr. David Letscher", role: "Programming Mentor", background: "Computer Science Professor at SLU — data structures and algorithmic thinking to improve code efficiency and performance." },
-  { name: "Jason Fritts", role: "Programming Mentor", background: "Professor of Computer Science at SLU — OpenCV and Limelight, refined contour detection and alignment thresholds." },
-  { name: "Prateek Gautam", role: "Outreach Mentor", background: "MIT alum, AI Engineer at Palintir — scaled our outreach by developing structured robotics workshops for students." },
-  { name: "Collin Shipley", role: "Design Mentor", background: "Bastian Solutions Engineer, FTC alum — structured coding practices, system-level thinking, and applying AI concepts effectively." },
-  { name: "Abhi Ganesh", role: "Engineering Mentor", background: "Software Engineer at Oracle, FTC alum — systems thinking across drivetrain, intake, and vision to reduce cycle-time bottlenecks." },
-];
-
-const results = [
-  {
-    title: "League Tournament",
-    robot: "Inhibitor",
-    award: "1st — Sustain Award",
-    detail: "101.17 point average across the tournament.",
-  },
-  {
-    title: "Eastern Missouri Super Qualifier",
-    robot: "Catalyst",
-    award: "1st — Inspire Award + Winning Alliance",
-    detail: "135.5 point average — top honor and the alliance title in one event.",
-  },
-  {
-    title: "MO/KS State Championship & League Tournament",
-    robot: "Catalyst V2",
-    award: "1st — Sustain Award",
-    detail: "Placed 8th in Advancement Points and qualified for the Chicago Robotics Invitational (CRI).",
-  },
-  {
-    title: "Chicago Robotics Invitational",
-    robot: "Catalyst 2.0",
-    award: "Qualified & Competed",
-    detail: "Brought our third robot iteration — a pocketed carbon-fiber chassis, molded vector wheels, and active counter-rollers — to compete against some of the best teams in the country.",
-  },
 ];
 
 const initials = (name) =>
@@ -296,130 +259,6 @@ const AboutUs = () => {
       </Container>
     </Box>
 
-    {/* MENTORS */}
-    <Box sx={sectionSx}>
-      <Container maxWidth="lg">
-        <Reveal>
-          <Box sx={{ textAlign: "center", mb: 6 }}>
-            <Typography variant="overline" sx={{ color: "secondary.main", fontWeight: 700, letterSpacing: 2 }}>
-              OUR MENTOR NETWORK
-            </Typography>
-            <Typography variant="h3" sx={{ mt: 1, mb: 2 }}>
-              Mentors
-            </Typography>
-            <Typography variant="body1" sx={{ color: "text.secondary", maxWidth: 640, mx: "auto" }}>
-              Industry professionals, university professors, and FTC alumni who sharpen our engineering,
-              programming, and outreach every season.
-            </Typography>
-          </Box>
-        </Reveal>
-        <Grid2 container spacing={3}>
-          {mentors.map((m, i) => (
-            <Grid2 key={m.name} size={{ xs: 12, sm: 6, md: 4 }}>
-              <Reveal delay={(i % 3) * 0.1}>
-                <Box sx={{ ...glassCardSx, p: 3, height: "100%" }}>
-                  <Chip
-                    label={m.role.toUpperCase()}
-                    size="small"
-                    sx={{ mb: 1.5, bgcolor: "rgba(255,122,26,0.14)", color: "secondary.light", fontWeight: 700 }}
-                  />
-                  <Typography variant="h6" sx={{ mb: 1 }}>
-                    {m.name}
-                  </Typography>
-                  <Typography variant="body2" sx={{ color: "text.secondary" }}>
-                    {m.background}
-                  </Typography>
-                </Box>
-              </Reveal>
-            </Grid2>
-          ))}
-        </Grid2>
-      </Container>
-    </Box>
-
-    {/* 2025-26 FTC RESULTS TIMELINE */}
-    <Box sx={{ ...sectionSx, pb: { xs: 10, md: 14 } }}>
-      <Container maxWidth="md">
-        <Reveal>
-          <Box sx={{ textAlign: "center", mb: 8 }}>
-            <Typography variant="overline" sx={{ color: "secondary.main", fontWeight: 700, letterSpacing: 2 }}>
-              2025–26 DECODE SEASON
-            </Typography>
-            <Typography variant="h3" sx={{ mt: 1 }}>
-              Competition Results
-            </Typography>
-          </Box>
-        </Reveal>
-
-        <Box sx={{ position: "relative" }}>
-          <Box
-            sx={{
-              position: "absolute",
-              left: { xs: 19, md: "50%" },
-              top: 0,
-              bottom: 0,
-              width: 2,
-              bgcolor: "rgba(255,255,255,0.1)",
-              transform: { md: "translateX(-50%)" },
-            }}
-          />
-          {results.map((r, i) => {
-            const leftSide = i % 2 === 0;
-            return (
-              <Box
-                key={r.title}
-                sx={{
-                  display: "flex",
-                  flexDirection: { xs: "row", md: leftSide ? "row" : "row-reverse" },
-                  alignItems: "center",
-                  gap: 3,
-                  mb: 5,
-                  position: "relative",
-                }}
-              >
-                <Box
-                  sx={{
-                    position: "absolute",
-                    left: { xs: 19, md: "50%" },
-                    transform: "translateX(-50%)",
-                    width: 16,
-                    height: 16,
-                    borderRadius: "50%",
-                    background: "linear-gradient(135deg, #2f7dff, #ff7a1a)",
-                    border: "3px solid #0a0e17",
-                    zIndex: 1,
-                  }}
-                />
-                <Box sx={{ width: { xs: 0, md: "calc(50% - 24px)" }, display: { xs: "none", md: "block" } }} />
-                <Box sx={{ pl: { xs: 6, md: 0 }, width: { xs: "100%", md: "calc(50% - 24px)" } }}>
-                  <Reveal direction={leftSide ? "right" : "left"} delay={i * 0.1}>
-                    <Box sx={{ ...glassCardSx, p: 3 }}>
-                      <Box sx={{ display: "flex", alignItems: "center", gap: 1.5, mb: 1 }}>
-                        <EmojiEventsIcon sx={{ color: "secondary.main", fontSize: 28, flexShrink: 0 }} />
-                        <Typography variant="subtitle1" sx={{ fontWeight: 700, lineHeight: 1.3 }}>
-                          {r.title}
-                        </Typography>
-                      </Box>
-                      <Chip
-                        label={`ROBOT: ${r.robot.toUpperCase()}`}
-                        size="small"
-                        sx={{ mb: 1.5, bgcolor: "rgba(47,125,255,0.12)", color: "primary.light", fontWeight: 700 }}
-                      />
-                      <Typography variant="body2" sx={{ fontWeight: 700, color: "secondary.light", mb: 0.5 }}>
-                        {r.award}
-                      </Typography>
-                      <Typography variant="body2" sx={{ color: "text.secondary" }}>
-                        {r.detail}
-                      </Typography>
-                    </Box>
-                  </Reveal>
-                </Box>
-              </Box>
-            );
-          })}
-        </Box>
-      </Container>
-    </Box>
   </PageTransition>
   );
 };

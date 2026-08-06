@@ -23,7 +23,7 @@ import FLL from './pages/FLL';
 import JoinUs from './pages/JoinUs';
 import Gallery from './pages/Gallery';
 import Robot from './pages/Robot';
-import History from './pages/History';
+import Awards from './pages/Awards';
 import NotFound from './pages/NotFound';
 import Season from './pages/Season';
 import Blog from './pages/Blog';
@@ -84,7 +84,7 @@ const routers = createBrowserRouter([
           { path: "/", element: <MainApp /> },
           { path: "/aboutus", element: <AboutUs /> },
           { path: "/robot", element: <Robot /> },
-          { path: "/history", element: <History /> },
+          { path: "/awards", element: <Awards /> },
           { path: "/first", element: <FIRST /> },
           { path: "/projects", element: <Projects /> },
           { path: "/gallery", element: <Gallery /> },

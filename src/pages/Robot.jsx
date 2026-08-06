@@ -22,7 +22,7 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import PanToolIcon from "@mui/icons-material/PanTool";
 import CableIcon from "@mui/icons-material/Cable";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
-import HistoryIcon from "@mui/icons-material/History";
+import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
 import PageHero from "../components/PageHero";
 import Reveal from "../components/Reveal";
 import PageTransition from "../components/PageTransition";
@@ -477,7 +477,7 @@ const Robot = () => {
         </Container>
       </Box>
 
-      {/* 3D + HISTORY CTA */}
+      {/* 3D + NEXT SEASON CTA */}
       <Box sx={{ ...sectionSx, pb: { xs: 10, md: 14 } }}>
         <Container maxWidth="lg">
           <Grid2 container spacing={6} alignItems="center">
@@ -492,14 +492,14 @@ const Robot = () => {
             <Grid2 size={{ xs: 12, md: 6 }}>
               <Reveal direction="left">
                 <Typography variant="h4" sx={{ mb: 2 }}>
-                  Where did it all start?
+                  What's next?
                 </Typography>
                 <Typography variant="body1" sx={{ color: "text.secondary", mb: 3 }}>
-                  Catalyst is our second-season robot. Before DECODE there was INTO THE DEEP — our rookie
-                  season of broken claws, oversized robots, and the lessons that made this season possible.
+                  We're already gearing up for the 2026–27 season — a new game, a new robot, and a lot of
+                  lessons from this year carried forward.
                 </Typography>
-                <Button variant="contained" color="primary" startIcon={<HistoryIcon />} onClick={() => navigate("/history")}>
-                  Read Our Rookie Season Story
+                <Button variant="contained" color="primary" startIcon={<RocketLaunchIcon />} onClick={() => navigate("/season")}>
+                  See What's Coming Next Season
                 </Button>
               </Reveal>
             </Grid2>

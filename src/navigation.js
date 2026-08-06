@@ -4,8 +4,8 @@ export const navGroups = [
     label: "Team",
     items: [
       { label: "About Us", path: "/aboutus" },
-      { label: "History", path: "/history" },
       { label: "Robot", path: "/robot" },
+      { label: "Awards", path: "/awards" },
       { label: "Gallery", path: "/gallery" },
     ],
   },
