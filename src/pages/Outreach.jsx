@@ -26,45 +26,32 @@ const reach = [
   { to: 6, label: "Continents" },
 ];
 
-const photoEvents = [
+const programs = [
   {
-    title: "Boeing STEAM & Space Day",
-    desc:
-      "2,000+ attendees got hands-on robot driving time with our competition robot, as we shared robotics and STEM with families and enthusiasts of all ages.",
+    title: "Bastian Solutions Facility Tour",
+    desc: "We visited the Bastian Solutions Robotics Facility in St. Louis to explore real-world industrial automation and robotics engineering — learning how large-scale systems operate in manufacturing and logistics, with insights from a Senior Automation Engineer.",
     img: "Images/RandomRobotInAction.jpg",
   },
   {
     title: "Magic House Star Wars STEM Night",
-    desc:
-      "400+ community members joined us at the Magic House in St. Louis, where we showcased our custom 3D-printed B2 bot and shared our love of robotics with the STL region.",
+    desc: "Showcased two FTC robots, including a custom 3D-printed B2 bot, to over 400 community members at the Magic House's Star Wars Night — merging the excitement of Star Wars with real-world robotics.",
     img: "Images/magichouseevent.jpg",
-  },
-];
-
-const programs = [
-  {
-    title: "FTC Survival Guide Book",
-    desc: "A 20-page guide for rookie FTC teams — a 4-month project scoring 9.4/10 for helpfulness from alumni reviewers.",
-  },
-  {
-    title: "Mentoring the Thunderbots (Turkey)",
-    desc: "Guided this Turkish FLL team to qualify for the FLL World Championship and win the Robot Performance Award at Turkish Nationals.",
-  },
-  {
-    title: "Ghana Partnership",
-    desc: "In a pilot program with The Smart Kids Ghana Association, we brought virtual STEM and robotics education to 80+ students in underserved communities every Saturday for 3+ hours.",
-  },
-  {
-    title: "Team-Led Robotics Summer Camp",
-    desc: "100+ hours of lesson planning for ages 4–12 — block coding, Bricklink Studio CAD, and Tinkercad final projects. Helped launch new FLL teams: Eager Eagles, Majestic Pointe, and Golden Falcons.",
   },
   {
     title: "Boeing STEAM & Space Day",
-    desc: "2,000+ attendees got hands-on robot driving time with our competition robot.",
+    desc: "2,000+ attendees got hands-on robot driving time with our competition robot, as we shared robotics and STEM with families and enthusiasts of all ages.",
   },
   {
     title: "SciFest Robot Expo",
-    desc: "3,000+ attendees at the Science Center saw FTC robotics up close.",
+    desc: "3,000+ attendees at the Science Center saw FTC robotics up close — from young kids to industry professionals — as we showcased our robot and let visitors take the controls.",
+  },
+  {
+    title: "Social Media Success",
+    desc: "Grew our Instagram to 210+ followers across 30+ posts, generating 11,450+ tri-monthly impressions through build logs, competition highlights, and outreach content.",
+  },
+  {
+    title: "Chess Cardinals Presentation",
+    desc: "Presented FTC robotics to nearly 70 chess players and their parents at Chess Cardinals in Chesterfield — connecting robotics and chess through strategy and logic.",
   },
 ];
 
@@ -150,51 +137,13 @@ const Outreach = () => {
         </Container>
       </Box>
 
-      {/* PHOTO HIGHLIGHTS */}
-      <Box sx={sectionSx}>
-        <Container maxWidth="lg">
-          <Grid2 container spacing={5}>
-            {photoEvents.map((e, i) => (
-              <Grid2 key={e.title} size={{ xs: 12, md: 6 }}>
-                <Reveal delay={i * 0.1} direction={i % 2 === 0 ? "right" : "left"}>
-                  <Box sx={{ ...glassCardSx, overflow: "hidden", height: "100%" }}>
-                    <Box sx={{ height: 320, overflow: "hidden" }}>
-                      <Box
-                        component="img"
-                        src={e.img}
-                        alt={e.title}
-                        sx={{
-                          width: "100%",
-                          height: "100%",
-                          objectFit: "cover",
-                          transition: "transform 0.6s ease",
-                          "&:hover": { transform: "scale(1.06)" },
-                        }}
-                      />
-                    </Box>
-                    <Box sx={{ p: 3.5 }}>
-                      <Typography variant="h5" sx={{ mb: 1.5 }}>
-                        {e.title}
-                      </Typography>
-                      <Typography variant="body1" sx={{ color: "text.secondary" }}>
-                        {e.desc}
-                      </Typography>
-                    </Box>
-                  </Box>
-                </Reveal>
-              </Grid2>
-            ))}
-          </Grid2>
-        </Container>
-      </Box>
-
       {/* NOTABLE PROGRAMS */}
       <Box sx={sectionSx}>
         <Container maxWidth="lg">
           <Reveal>
             <Box sx={{ textAlign: "center", mb: 6 }}>
               <Typography variant="overline" sx={{ color: "secondary.main", fontWeight: 700, letterSpacing: 2 }}>
-                FROM CHESTERFIELD TO SIX CONTINENTS
+                BUILDING MORE THAN ROBOTS
               </Typography>
               <Typography variant="h3" sx={{ mt: 1 }}>
                 Notable Programs & Events
@@ -205,13 +154,31 @@ const Outreach = () => {
             {programs.map((p, i) => (
               <Grid2 key={p.title} size={{ xs: 12, sm: 6, md: 4 }}>
                 <Reveal delay={(i % 3) * 0.08}>
-                  <Box sx={{ ...glassCardSx, p: 3, height: "100%" }}>
-                    <Typography variant="subtitle1" sx={{ fontWeight: 700, mb: 1, color: "primary.light" }}>
-                      {p.title}
-                    </Typography>
-                    <Typography variant="body2" sx={{ color: "text.secondary" }}>
-                      {p.desc}
-                    </Typography>
+                  <Box sx={{ ...glassCardSx, overflow: "hidden", height: "100%" }}>
+                    {p.img && (
+                      <Box sx={{ height: 160, overflow: "hidden" }}>
+                        <Box
+                          component="img"
+                          src={p.img}
+                          alt={p.title}
+                          sx={{
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "cover",
+                            transition: "transform 0.6s ease",
+                            "&:hover": { transform: "scale(1.06)" },
+                          }}
+                        />
+                      </Box>
+                    )}
+                    <Box sx={{ p: 3 }}>
+                      <Typography variant="subtitle1" sx={{ fontWeight: 700, mb: 1, color: "primary.light" }}>
+                        {p.title}
+                      </Typography>
+                      <Typography variant="body2" sx={{ color: "text.secondary" }}>
+                        {p.desc}
+                      </Typography>
+                    </Box>
                   </Box>
                 </Reveal>
               </Grid2>
