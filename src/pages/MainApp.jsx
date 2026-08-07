@@ -9,15 +9,12 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import PrecisionManufacturingIcon from "@mui/icons-material/PrecisionManufacturing";
 import SchoolIcon from "@mui/icons-material/School";
 import EmojiObjectsIcon from "@mui/icons-material/EmojiObjects";
-import ViewInArIcon from "@mui/icons-material/ViewInAr";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import GlowBackground from "../components/GlowBackground";
 import Reveal from "../components/Reveal";
-import Counter from "../components/Counter";
 import PageTransition from "../components/PageTransition";
 import TiltCard from "../components/TiltCard";
 import Marquee from "../components/Marquee";
-import RobotScene from "../components/RobotScene";
 import { glassCardSx, sectionSx } from "../components/styles";
 import usePageTitle from "../hooks/usePageTitle";
 
@@ -28,13 +25,6 @@ const marqueeItems = [
   "DECODE 2025–26",
   "EVERY ACTION NEEDS A CATALYST",
   "STUDENT-LED",
-];
-
-const stats = [
-  { to: 37, label: "Outreach Events" },
-  { to: 7200, suffix: "+", label: "People Impacted" },
-  { to: 450, suffix: "+", label: "Volunteer Hours" },
-  { to: 18, label: "FLL Teams Started or Mentored" },
 ];
 
 const seasonHighlights = [
@@ -230,23 +220,26 @@ const MainApp = () => {
 
       <Marquee items={marqueeItems} />
 
-      {/* STATS */}
-      <Box sx={{ ...sectionSx, borderTop: "1px solid rgba(255,255,255,0.06)", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
-        <Container maxWidth="lg">
-          <Grid2 container spacing={4}>
-            {stats.map((s, i) => (
-              <Grid2 key={s.label} size={{ xs: 6, md: 3 }}>
-                <Reveal delay={i * 0.08}>
-                  <Box sx={{ textAlign: "center" }}>
-                    <Counter to={s.to} prefix={s.prefix} suffix={s.suffix} variant="h3" sx={{ color: "primary.light" }} />
-                    <Typography variant="body2" sx={{ color: "text.secondary", mt: 1, fontWeight: 600 }}>
-                      {s.label}
-                    </Typography>
-                  </Box>
-                </Reveal>
-              </Grid2>
-            ))}
-          </Grid2>
+      {/* ABOUT TEASER */}
+      <Box sx={{ ...sectionSx, py: { xs: 6, md: 8 }, borderTop: "1px solid rgba(255,255,255,0.06)", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
+        <Container maxWidth="md">
+          <Reveal>
+            <Box sx={{ textAlign: "center" }}>
+              <Typography variant="overline" sx={{ color: "secondary.main", fontWeight: 700, letterSpacing: 2 }}>
+                ABOUT US
+              </Typography>
+              <Typography variant="h4" sx={{ mt: 1, mb: 2 }}>
+                FTC Team 25779, Chesterfield, Missouri
+              </Typography>
+              <Typography variant="body1" sx={{ color: "text.secondary", maxWidth: 640, mx: "auto", mb: 3 }}>
+                An entirely student-led robotics team building competition robots and bringing STEM to our
+                community since 2024.
+              </Typography>
+              <Button variant="outlined" color="primary" endIcon={<ArrowForwardIcon />} onClick={() => navigate("/aboutus")}>
+                Learn More About Us
+              </Button>
+            </Box>
+          </Reveal>
         </Container>
       </Box>
 
@@ -365,43 +358,6 @@ const MainApp = () => {
         </Container>
       </Box>
 
-      {/* 3D ROBOT SHOWCASE */}
-      <Box sx={sectionSx}>
-        <Container maxWidth="lg">
-          <Grid2 container spacing={6} alignItems="center">
-            <Grid2 size={{ xs: 12, md: 5 }}>
-              <Reveal direction="right">
-                <Typography variant="overline" sx={{ color: "secondary.main", fontWeight: 700, letterSpacing: 2 }}>
-                  UNDER THE HOOD
-                </Typography>
-                <Typography variant="h3" sx={{ mt: 1, mb: 2 }}>
-                  Explore a Robot in 3D
-                </Typography>
-                <Typography variant="body1" sx={{ color: "text.secondary", mb: 3 }}>
-                  Drag to rotate, scroll to zoom — this illustrative model shows how an FTC robot's systems
-                  fit together. Our real machine, Catalyst, packs a rotating hooded turret, a 3-level intake,
-                  and Limelight-powered auto-aim.
-                </Typography>
-                <Button
-                  variant="contained"
-                  color="primary"
-                  endIcon={<ViewInArIcon />}
-                  onClick={() => navigate("/robot")}
-                >
-                  Meet the Real Robot: Catalyst
-                </Button>
-              </Reveal>
-            </Grid2>
-            <Grid2 size={{ xs: 12, md: 7 }}>
-              <Reveal direction="left">
-                <RobotScene height={420} />
-              </Reveal>
-            </Grid2>
-          </Grid2>
-        </Container>
-      </Box>
-
-      {/* PROJECTS PREVIEW */}
       {/* SUPPORT CTA */}
       <Box sx={{ ...sectionSx, pb: { xs: 10, md: 14 } }}>
         <Container maxWidth="md">

@@ -43,8 +43,8 @@ const photoEvents = [
 
 const programs = [
   {
-    title: "Founded STEM For All",
-    desc: "A student-run nonprofit founded to expand STEM access across the greater St. Louis area — 23+ outreach events, $2,000+ raised to launch new FLL/FTC teams, and 6+ school/organization partnerships.",
+    title: "FTC Survival Guide Book",
+    desc: "A 20-page guide for rookie FTC teams — a 4-month project scoring 9.4/10 for helpfulness from alumni reviewers.",
   },
   {
     title: "Mentoring the Thunderbots (Turkey)",
