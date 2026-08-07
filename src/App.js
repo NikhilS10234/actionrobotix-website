@@ -12,7 +12,6 @@ import {
   RouterProvider
 } from "react-router-dom";
 import FIRST from './pages/FIRST';
-import Projects from './pages/Projects';
 import Outreach from './pages/Outreach';
 import SupportUs from './pages/SupportUs';
 import ContactUs from './pages/ContactUs';
@@ -23,7 +22,6 @@ import FLL from './pages/FLL';
 import JoinUs from './pages/JoinUs';
 import Gallery from './pages/Gallery';
 import Robot from './pages/Robot';
-import Awards from './pages/Awards';
 import NotFound from './pages/NotFound';
 import Season from './pages/Season';
 import Blog from './pages/Blog';
@@ -84,9 +82,7 @@ const routers = createBrowserRouter([
           { path: "/", element: <MainApp /> },
           { path: "/aboutus", element: <AboutUs /> },
           { path: "/robot", element: <Robot /> },
-          { path: "/awards", element: <Awards /> },
           { path: "/first", element: <FIRST /> },
-          { path: "/projects", element: <Projects /> },
           { path: "/gallery", element: <Gallery /> },
           { path: "/outreach", element: <Outreach /> },
           { path: "/join", element: <JoinUs /> },

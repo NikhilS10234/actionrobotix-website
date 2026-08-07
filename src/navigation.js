@@ -5,7 +5,6 @@ export const navGroups = [
     items: [
       { label: "About Us", path: "/aboutus" },
       { label: "Robot", path: "/robot" },
-      { label: "Awards", path: "/awards" },
       { label: "Gallery", path: "/gallery" },
     ],
   },
@@ -21,7 +20,6 @@ export const navGroups = [
   {
     label: "Get Involved",
     items: [
-      { label: "Projects", path: "/projects" },
       { label: "Outreach", path: "/outreach" },
       { label: "Join Us", path: "/join" },
       { label: "Portfolio Database", path: "/portfolios" },

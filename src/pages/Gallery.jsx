@@ -22,9 +22,6 @@ const images = [
   { src: "Images/fllPicture.avif", alt: "FIRST LEGO League", category: "Robots" },
   { src: "Images/FLLMentor.jpeg", alt: "Mentoring an FLL team", category: "Outreach" },
   { src: "Images/magichouseevent.jpg", alt: "Magic House community event", category: "Outreach" },
-  { src: "Images/actiStrap.jpg", alt: "ActiStrap project", category: "Projects" },
-  { src: "Images/TopTennisPic.png", alt: "Top Tennis project", category: "Projects" },
-  { src: "Images/roadTurbine.jpg", alt: "Road Turbine project", category: "Projects" },
   { src: "Images/arnavA.png", alt: "Arnav A — Design", category: "Team" },
   { src: "Images/keshav.png", alt: "Keshav — Design", category: "Team" },
   { src: "Images/arnavM.png", alt: "Arnav M — Build", category: "Team" },
@@ -39,7 +36,7 @@ const images = [
   { src: "Images/nikhil.jpeg", alt: "Nikhil — Outreach", category: "Team" },
 ];
 
-const categories = ["All", "Competitions", "Robots", "Outreach", "Projects", "Team"];
+const categories = ["All", "Competitions", "Robots", "Outreach", "Team"];
 
 const Gallery = () => {
   const [filter, setFilter] = useState("All");

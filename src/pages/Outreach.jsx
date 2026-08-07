@@ -43,8 +43,8 @@ const photoEvents = [
 
 const programs = [
   {
-    title: "Global Robotics Exchange",
-    desc: "Coordinated across 10 time zones — hosted sessions reaching 21 teams from 16 countries.",
+    title: "Founded STEM For All",
+    desc: "A student-run nonprofit founded to expand STEM access across the greater St. Louis area — 23+ outreach events, $2,000+ raised to launch new FLL/FTC teams, and 6+ school/organization partnerships.",
   },
   {
     title: "Mentoring the Thunderbots (Turkey)",
@@ -53,10 +53,6 @@ const programs = [
   {
     title: "Ghana Partnership",
     desc: "In a pilot program with The Smart Kids Ghana Association, we brought virtual STEM and robotics education to 80+ students in underserved communities every Saturday for 3+ hours.",
-  },
-  {
-    title: "Founded STEM For All",
-    desc: "A student-run nonprofit founded to expand STEM access across the greater St. Louis area — 23+ outreach events, $2,000+ raised to launch new FLL/FTC teams, and 6+ school/organization partnerships.",
   },
   {
     title: "Team-Led Robotics Summer Camp",
@@ -69,30 +65,6 @@ const programs = [
   {
     title: "SciFest Robot Expo",
     desc: "3,000+ attendees at the Science Center saw FTC robotics up close.",
-  },
-  {
-    title: "Harris-Stowe University Showcase",
-    desc: "An HBCU showcase focused on access to robotics for underrepresented communities.",
-  },
-  {
-    title: "FRC Regional Championship (Chaifetz Arena)",
-    desc: "Introduced FIRST, FTC, and FLL to parents and kids at Missouri's biggest FIRST event.",
-  },
-  {
-    title: "Chess Cardinals Presentation",
-    desc: "Presented FTC robotics to nearly 70 chess players and their parents at Chess Cardinals in Chesterfield — connecting robotics and chess through strategy and logic.",
-  },
-  {
-    title: "Bastian Solutions Facility Tour",
-    desc: "Explored industrial automation and met with a Senior Automation Engineer.",
-  },
-  {
-    title: "Balvihar Community Showcase",
-    desc: "Brought robotics demos to our local community.",
-  },
-  {
-    title: "FTC Survival Guide Book",
-    desc: "A 20-page guide for rookie FTC teams — a 4-month project scoring 9.4/10 for helpfulness from alumni reviewers.",
   },
 ];
 

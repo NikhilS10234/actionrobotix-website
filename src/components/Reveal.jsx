@@ -12,7 +12,7 @@ const Reveal = ({ children, direction = "up", delay = 0, duration = 0.6, once = 
   const offset = DIRECTIONS[direction] || DIRECTIONS.up;
   return (
     <motion.div
-      style={sx}
+      style={{ height: "100%", ...sx }}
       initial={{ opacity: 0, ...offset }}
       whileInView={{ opacity: 1, y: 0, x: 0 }}
       viewport={{ once, amount }}

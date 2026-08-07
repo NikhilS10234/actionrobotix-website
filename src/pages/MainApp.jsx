@@ -32,8 +32,8 @@ const marqueeItems = [
 
 const stats = [
   { to: 37, label: "Outreach Events" },
-  { to: 7000, suffix: "+", label: "People Impacted" },
-  { to: 253, label: "Volunteer Hours" },
+  { to: 7200, suffix: "+", label: "People Impacted" },
+  { to: 450, suffix: "+", label: "Volunteer Hours" },
   { to: 18, label: "FLL Teams Started or Mentored" },
 ];
 
@@ -62,12 +62,6 @@ const programs = [
     desc: "The pinnacle of the FIRST pathway — learn what's next as our members grow into FRC-level engineering.",
     path: "/frc",
   },
-];
-
-const projectPreviews = [
-  { title: "ActiStrap", img: "Images/actiStrap.jpg", desc: "A precision measuring device for footwear sizing." },
-  { title: "Top Tennis", img: "Images/TopTennisPic.png", desc: "An indoor tennis simulator with projected ball tracking." },
-  { title: "Road Turbine", img: "Images/roadTurbine.jpg", desc: "Harvesting kinetic energy from passing vehicles." },
 ];
 
 const heroImages = [
@@ -408,55 +402,6 @@ const MainApp = () => {
       </Box>
 
       {/* PROJECTS PREVIEW */}
-      <Box sx={sectionSx}>
-        <Container maxWidth="lg">
-          <Reveal>
-            <Box sx={{ textAlign: "center", mb: 6 }}>
-              <Typography variant="overline" sx={{ color: "secondary.main", fontWeight: 700, letterSpacing: 2 }}>
-                BEYOND THE FIELD
-              </Typography>
-              <Typography variant="h3" sx={{ mt: 1 }}>
-                Real-World Projects
-              </Typography>
-            </Box>
-          </Reveal>
-          <Grid2 container spacing={4}>
-            {projectPreviews.map((p, i) => (
-              <Grid2 key={p.title} size={{ xs: 12, md: 4 }}>
-                <Reveal delay={i * 0.1}>
-                  <TiltCard onClick={() => navigate("/projects")} sx={{ height: "100%" }} max={6}>
-                    <Box sx={{ ...glassCardSx, overflow: "hidden", cursor: "pointer", height: "100%" }}>
-                      <Box sx={{ overflow: "hidden", height: 200 }}>
-                        <Box
-                          component="img"
-                          src={p.img}
-                          alt={p.title}
-                          sx={{
-                            width: "100%",
-                            height: "100%",
-                            objectFit: "cover",
-                            transition: "transform 0.5s ease",
-                            "&:hover": { transform: "scale(1.08)" },
-                          }}
-                        />
-                      </Box>
-                      <Box sx={{ p: 3 }}>
-                        <Typography variant="h6" sx={{ mb: 1 }}>
-                          {p.title}
-                        </Typography>
-                        <Typography variant="body2" sx={{ color: "text.secondary" }}>
-                          {p.desc}
-                        </Typography>
-                      </Box>
-                    </Box>
-                  </TiltCard>
-                </Reveal>
-              </Grid2>
-            ))}
-          </Grid2>
-        </Container>
-      </Box>
-
       {/* SUPPORT CTA */}
       <Box sx={{ ...sectionSx, pb: { xs: 10, md: 14 } }}>
         <Container maxWidth="md">
