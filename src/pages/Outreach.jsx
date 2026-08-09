@@ -30,7 +30,7 @@ const programs = [
   {
     title: "Bastian Solutions Facility Tour",
     desc: "We visited the Bastian Solutions Robotics Facility in St. Louis to explore real-world industrial automation and robotics engineering — learning how large-scale systems operate in manufacturing and logistics, with insights from a Senior Automation Engineer.",
-    img: "Images/RandomRobotInAction.jpg",
+    img: "Images/BastianSolution.png",
   },
   {
     title: "Magic House Star Wars STEM Night",

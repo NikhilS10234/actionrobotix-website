@@ -28,7 +28,7 @@ const marqueeItems = [
 ];
 
 const seasonHighlights = [
-  { event: "League Tournament", award: "1st — Sustain Award", detail: "101.17 point average with our robot Inhibitor" },
+  { event: "STL MID League Tournament", award: "1st — Sustain Award", detail: "101.17 point average with our robot Inhibitor" },
   { event: "EMO Super Qualifier", award: "1st — Inspire Award + Winning Alliance", detail: "135.5 point average with Catalyst" },
   { event: "MO/KS State Championship", award: "1st — Sustain Award", detail: "8th in Advancement Points — qualified for CRI" },
 ];
