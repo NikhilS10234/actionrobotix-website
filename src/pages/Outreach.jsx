@@ -44,6 +44,7 @@ const programs = [
   {
     title: "SciFest Robot Expo",
     desc: "3,000+ attendees at the Science Center saw FTC robotics up close — from young kids to industry professionals — as we showcased our robot and let visitors take the controls.",
+    img: "Images/SCIFest.png",
   },
   {
     title: "Social Media Success",
