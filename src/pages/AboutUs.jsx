@@ -152,8 +152,8 @@ const AboutUs = () => {
             <Reveal direction="right">
               <Box
                 component="img"
-                src="Images/ftcComp.jpg"
-                alt="Action Robotix competing"
+                src="Images/ABOUTUSMAIN.png"
+                alt="Action Robotix team"
                 sx={{ width: "100%", borderRadius: 4, boxShadow: "0 24px 48px rgba(0,0,0,0.4)" }}
               />
             </Reveal>
