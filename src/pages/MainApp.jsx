@@ -220,6 +220,43 @@ const MainApp = () => {
 
       <Marquee items={marqueeItems} />
 
+      {/* ABOUT PREVIEW */}
+      <Box sx={sectionSx}>
+        <Container maxWidth="lg">
+          <Grid2 container spacing={6} alignItems="center">
+            <Grid2 size={{ xs: 12, md: 6 }}>
+              <Reveal direction="right">
+                <Box
+                  component="img"
+                  src="Images/Sustain.webp"
+                  alt="Action Robotix team"
+                  sx={{ width: "100%", borderRadius: 4, boxShadow: "0 24px 48px rgba(0,0,0,0.4)" }}
+                />
+              </Reveal>
+            </Grid2>
+            <Grid2 size={{ xs: 12, md: 6 }}>
+              <Reveal direction="left">
+                <Typography variant="overline" sx={{ color: "secondary.main", fontWeight: 700, letterSpacing: 2 }}>
+                  WHO WE ARE
+                </Typography>
+                <Typography variant="h3" sx={{ mt: 1, mb: 2 }}>
+                  Teamwork, creativity, and a passion for STEM.
+                </Typography>
+                <Typography variant="body1" sx={{ color: "text.secondary", mb: 3 }}>
+                  Founded in 2024 and now in our second season, Action Robotix is entirely student-led —
+                  captains and division leads run four subteams (Design, Build, Programming, Outreach), backed
+                  by an extensive mentor network of industry professionals, university professors, and fellow
+                  FIRST members.
+                </Typography>
+                <Button variant="contained" color="primary" endIcon={<ArrowForwardIcon />} onClick={() => navigate("/aboutus")}>
+                  Learn More About Us
+                </Button>
+              </Reveal>
+            </Grid2>
+          </Grid2>
+        </Container>
+      </Box>
+
       {/* SEASON HIGHLIGHTS */}
       <Box sx={sectionSx}>
         <Container maxWidth="lg">
@@ -258,43 +295,6 @@ const MainApp = () => {
               Meet the Team
             </Button>
           </Box>
-        </Container>
-      </Box>
-
-      {/* ABOUT PREVIEW */}
-      <Box sx={sectionSx}>
-        <Container maxWidth="lg">
-          <Grid2 container spacing={6} alignItems="center">
-            <Grid2 size={{ xs: 12, md: 6 }}>
-              <Reveal direction="right">
-                <Box
-                  component="img"
-                  src="Images/Sustain.webp"
-                  alt="Action Robotix team"
-                  sx={{ width: "100%", borderRadius: 4, boxShadow: "0 24px 48px rgba(0,0,0,0.4)" }}
-                />
-              </Reveal>
-            </Grid2>
-            <Grid2 size={{ xs: 12, md: 6 }}>
-              <Reveal direction="left">
-                <Typography variant="overline" sx={{ color: "secondary.main", fontWeight: 700, letterSpacing: 2 }}>
-                  WHO WE ARE
-                </Typography>
-                <Typography variant="h3" sx={{ mt: 1, mb: 2 }}>
-                  Teamwork, creativity, and a passion for STEM.
-                </Typography>
-                <Typography variant="body1" sx={{ color: "text.secondary", mb: 3 }}>
-                  Founded in 2024 and now in our second season, Action Robotix is entirely student-led —
-                  captains and division leads run four subteams (Design, Build, Programming, Outreach), backed
-                  by an extensive mentor network of industry professionals, university professors, and fellow
-                  FIRST members.
-                </Typography>
-                <Button variant="contained" color="primary" endIcon={<ArrowForwardIcon />} onClick={() => navigate("/aboutus")}>
-                  Learn More About Us
-                </Button>
-              </Reveal>
-            </Grid2>
-          </Grid2>
         </Container>
       </Box>
 
