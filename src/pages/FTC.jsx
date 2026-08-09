@@ -113,8 +113,8 @@ const FTC = () => {
                   Tournament and the MO/KS State Championship, and qualified for the Chicago Robotics
                   Invitational (CRI).
                 </Typography>
-                <Button variant="contained" color="primary" onClick={() => navigate("/robot")}>
-                  Meet Catalyst — Our Robot
+                <Button variant="contained" color="primary" onClick={() => navigate("/aboutus")}>
+                  Meet Our Team
                 </Button>
               </Reveal>
             </Grid2>

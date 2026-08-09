@@ -277,8 +277,8 @@ const MainApp = () => {
             ))}
           </Grid2>
           <Box sx={{ textAlign: "center", mt: 4 }}>
-            <Button variant="outlined" color="primary" endIcon={<ArrowForwardIcon />} onClick={() => navigate("/robot")}>
-              Meet Catalyst, Our Robot
+            <Button variant="outlined" color="primary" endIcon={<ArrowForwardIcon />} onClick={() => navigate("/aboutus")}>
+              Meet the Team
             </Button>
           </Box>
         </Container>

@@ -21,7 +21,6 @@ import FRC from './pages/FRC';
 import FLL from './pages/FLL';
 import JoinUs from './pages/JoinUs';
 import Gallery from './pages/Gallery';
-import Robot from './pages/Robot';
 import NotFound from './pages/NotFound';
 import Season from './pages/Season';
 import Blog from './pages/Blog';
@@ -81,7 +80,6 @@ const routers = createBrowserRouter([
     children: [
           { path: "/", element: <MainApp /> },
           { path: "/aboutus", element: <AboutUs /> },
-          { path: "/robot", element: <Robot /> },
           { path: "/first", element: <FIRST /> },
           { path: "/gallery", element: <Gallery /> },
           { path: "/outreach", element: <Outreach /> },
