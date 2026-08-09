@@ -179,7 +179,7 @@ const MainApp = () => {
                   transformPerspective: 1000,
                 }}
               >
-              <Box sx={{ position: "relative", height: { xs: 320, md: 420 } }}>
+              <Box sx={{ position: "relative", height: { xs: 420, md: 560 } }}>
                 {heroImages.map((img, i) => (
                   <motion.div
                     key={img}
@@ -189,9 +189,9 @@ const MainApp = () => {
                     whileHover={{ scale: 1.05, rotate: 0, zIndex: 10 }}
                     style={{
                       position: "absolute",
-                      top: `${i * 14}%`,
-                      left: `${i * 16}%`,
-                      width: "62%",
+                      top: `${i * 12}%`,
+                      left: `${i * 13}%`,
+                      width: "76%",
                       borderRadius: 20,
                       overflow: "hidden",
                       border: "4px solid rgba(255,255,255,0.08)",

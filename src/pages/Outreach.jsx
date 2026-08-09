@@ -1,30 +1,13 @@
-import { Box, Container, Grid2, Typography, Button, Chip } from "@mui/material";
+import { Box, Container, Grid2, Typography, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
 import GroupsIcon from "@mui/icons-material/Groups";
 import VideoLibraryIcon from "@mui/icons-material/VideoLibrary";
-import PublicIcon from "@mui/icons-material/Public";
 import PageHero from "../components/PageHero";
 import Reveal from "../components/Reveal";
-import Counter from "../components/Counter";
 import PageTransition from "../components/PageTransition";
 import { glassCardSx, sectionSx } from "../components/styles";
 import usePageTitle from "../hooks/usePageTitle";
-
-const bigStats = [
-  { to: 37, label: "Outreach Events" },
-  { to: 7200, suffix: "+", label: "People Impacted" },
-  { to: 450, suffix: "+", label: "Volunteer Hours" },
-  { to: 18, label: "FLL Teams Started or Mentored" },
-  { to: 24, label: "STEM Professionals Engaged" },
-  { to: 2500, prefix: "$", suffix: "+", label: "Raised in Grants & Fundraising" },
-];
-
-const reach = [
-  { to: 27, label: "States" },
-  { to: 16, label: "Countries" },
-  { to: 6, label: "Continents" },
-];
 
 const programs = [
   {
@@ -59,9 +42,6 @@ const programs = [
   },
 ];
 
-const teamsImpacted = ["Teksense (FLL)", "Thunderbots (FLL)", "Eager Eagles (FLL)", "Action Robotics (FLL)", "Control C (FTC)", "Kryptons (FTC)"];
-const teamsThatImpactedUs = ["Blue Bot Builders (FTC)", "SPARK (FTC)", "Gear Kingdom (FTC)", "Astrovo (FTC)", "HYDRQ (FTC)", "RoboRaiders (FRC)"];
-
 const resources = [
   {
     icon: <LibraryBooksIcon />,
@@ -93,53 +73,8 @@ const Outreach = () => {
       <PageHero
         eyebrow="COMMUNITY FIRST"
         title="Outreach"
-        subtitle="37 events. 7,000+ people. 6 continents. At Action Robotix, sharing STEM with the world is as important as the robot itself."
+        subtitle="At Action Robotix, sharing STEM with the world is as important as the robot itself."
       />
-
-      {/* BY THE NUMBERS */}
-      <Box sx={sectionSx}>
-        <Container maxWidth="lg">
-          <Grid2 container spacing={4} sx={{ mb: 5 }}>
-            {bigStats.map((s, i) => (
-              <Grid2 key={s.label} size={{ xs: 6, sm: 4, md: 2.4 }}>
-                <Reveal delay={i * 0.06}>
-                  <Box sx={{ textAlign: "center" }}>
-                    <Counter to={s.to} suffix={s.suffix} variant="h3" sx={{ color: "primary.light" }} />
-                    <Typography variant="body2" sx={{ color: "text.secondary", mt: 1, fontWeight: 600 }}>
-                      {s.label}
-                    </Typography>
-                  </Box>
-                </Reveal>
-              </Grid2>
-            ))}
-          </Grid2>
-          <Reveal>
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                gap: { xs: 3, md: 6 },
-                flexWrap: "wrap",
-                p: 3,
-                borderRadius: 4,
-                background: "linear-gradient(135deg, rgba(47,125,255,0.12) 0%, rgba(255,122,26,0.12) 100%)",
-                border: "1px solid rgba(255,255,255,0.08)",
-              }}
-            >
-              <PublicIcon sx={{ color: "secondary.main", fontSize: 36 }} />
-              {reach.map((r) => (
-                <Box key={r.label} sx={{ textAlign: "center" }}>
-                  <Counter to={r.to} variant="h4" sx={{ color: "secondary.light" }} />
-                  <Typography variant="body2" sx={{ color: "text.secondary", fontWeight: 600 }}>
-                    {r.label} of Impact
-                  </Typography>
-                </Box>
-              ))}
-            </Box>
-          </Reveal>
-        </Container>
-      </Box>
 
       {/* NOTABLE PROGRAMS */}
       <Box sx={sectionSx}>
@@ -187,42 +122,6 @@ const Outreach = () => {
                 </Reveal>
               </Grid2>
             ))}
-          </Grid2>
-        </Container>
-      </Box>
-
-      {/* TEAMS NETWORK */}
-      <Box sx={sectionSx}>
-        <Container maxWidth="lg">
-          <Grid2 container spacing={4}>
-            <Grid2 size={{ xs: 12, md: 6 }}>
-              <Reveal direction="right">
-                <Box sx={{ ...glassCardSx, p: 4, height: "100%" }}>
-                  <Typography variant="h6" sx={{ mb: 2 }}>
-                    Key Teams We've Impacted
-                  </Typography>
-                  <Box sx={{ display: "flex", gap: 1, flexWrap: "wrap" }}>
-                    {teamsImpacted.map((t) => (
-                      <Chip key={t} label={t} sx={{ bgcolor: "rgba(47,125,255,0.12)", color: "primary.light", fontWeight: 600 }} />
-                    ))}
-                  </Box>
-                </Box>
-              </Reveal>
-            </Grid2>
-            <Grid2 size={{ xs: 12, md: 6 }}>
-              <Reveal direction="left">
-                <Box sx={{ ...glassCardSx, p: 4, height: "100%" }}>
-                  <Typography variant="h6" sx={{ mb: 2 }}>
-                    Key Teams That Impacted Us
-                  </Typography>
-                  <Box sx={{ display: "flex", gap: 1, flexWrap: "wrap" }}>
-                    {teamsThatImpactedUs.map((t) => (
-                      <Chip key={t} label={t} sx={{ bgcolor: "rgba(255,122,26,0.14)", color: "secondary.light", fontWeight: 600 }} />
-                    ))}
-                  </Box>
-                </Box>
-              </Reveal>
-            </Grid2>
           </Grid2>
         </Container>
       </Box>
