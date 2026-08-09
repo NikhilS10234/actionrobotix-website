@@ -49,6 +49,7 @@ const programs = [
   {
     title: "Social Media Success",
     desc: "Grew our Instagram to 210+ followers across 30+ posts, generating 11,450+ tri-monthly impressions through build logs, competition highlights, and outreach content.",
+    img: "Images/IG.png",
   },
   {
     title: "Chess Cardinals Presentation",
