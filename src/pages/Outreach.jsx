@@ -40,6 +40,7 @@ const programs = [
   {
     title: "Boeing STEAM & Space Day",
     desc: "2,000+ attendees got hands-on robot driving time with our competition robot, as we shared robotics and STEM with families and enthusiasts of all ages.",
+    img: "Images/BOEING.png",
   },
   {
     title: "SciFest Robot Expo",
