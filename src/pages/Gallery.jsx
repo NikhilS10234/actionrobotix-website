@@ -11,17 +11,20 @@ import { sectionSx } from "../components/styles";
 import usePageTitle from "../hooks/usePageTitle";
 
 const images = [
+  { src: "Images/CRIPic.webp", alt: "Chicago Robotics Invitational", category: "Competitions" },
+  { src: "Images/SuperQualsPic.webp", alt: "1st Place Inspire Award, Eastern Missouri Super Qualifier", category: "Awards" },
+  { src: "Images/PitPic.webp", alt: "In the pits at Chicago Robotics Invitational", category: "Competitions" },
+  { src: "Images/Sustain.webp", alt: "1st Place Sustain Award", category: "Awards" },
   { src: "Images/ftcComp.jpg", alt: "Action Robotix at FTC competition", category: "Competitions" },
-  { src: "Images/RandomRobotInAction.jpg", alt: "Robot in action", category: "Robots" },
   { src: "Images/AR-Regional-Championship-2024.jpg", alt: "Regional Championship 2024", category: "Competitions" },
-  { src: "Images/sunshineInvational.jpg", alt: "Sunshine Invitational Championship", category: "Competitions" },
-  { src: "Images/coding-cheetahs.jpg", alt: "Champions Award", category: "Competitions" },
-  { src: "Images/houston.jpg", alt: "FLL Robotics World Championship, Houston", category: "Competitions" },
-  { src: "Images/ftcRobot.jpeg", alt: "Our FTC robot", category: "Robots" },
-  { src: "Images/frcPicture.jpeg", alt: "FIRST Robotics Competition", category: "Robots" },
-  { src: "Images/fllPicture.avif", alt: "FIRST LEGO League", category: "Robots" },
-  { src: "Images/FLLMentor.jpeg", alt: "Mentoring an FLL team", category: "Outreach" },
+  { src: "Images/coding-cheetahs.jpg", alt: "Champions Award", category: "Awards" },
+  { src: "Images/BastianSolution.png", alt: "Bastian Solutions Facility Tour", category: "Outreach" },
+  { src: "Images/BOEING.png", alt: "Boeing STEAM & Space Day", category: "Outreach" },
+  { src: "Images/SCIFest.png", alt: "SciFest Robot Expo", category: "Outreach" },
+  { src: "Images/IG.png", alt: "Action Robotix on Instagram", category: "Outreach" },
+  { src: "Images/ChessCardinals.png", alt: "Chess Cardinals Presentation", category: "Outreach" },
   { src: "Images/magichouseevent.jpg", alt: "Magic House community event", category: "Outreach" },
+  { src: "Images/ABOUTUSMAIN.png", alt: "Action Robotix team", category: "Team" },
   { src: "Images/arnavA.png", alt: "Arnav A — Design", category: "Team" },
   { src: "Images/keshav.png", alt: "Keshav — Design", category: "Team" },
   { src: "Images/arnavM.png", alt: "Arnav M — Build", category: "Team" },
@@ -36,7 +39,7 @@ const images = [
   { src: "Images/nikhil.jpeg", alt: "Nikhil — Outreach", category: "Team" },
 ];
 
-const categories = ["All", "Competitions", "Robots", "Outreach", "Team"];
+const categories = ["All", "Competitions", "Awards", "Outreach", "Team"];
 
 const Gallery = () => {
   const [filter, setFilter] = useState("All");
