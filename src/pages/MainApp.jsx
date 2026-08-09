@@ -189,7 +189,7 @@ const MainApp = () => {
                     whileHover={{ scale: 1.05, rotate: 0, zIndex: 10 }}
                     style={{
                       position: "absolute",
-                      top: `${i * 12}%`,
+                      top: `${8 + i * 16}%`,
                       left: `${i * 13}%`,
                       width: "76%",
                       borderRadius: 20,

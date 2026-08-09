@@ -180,7 +180,7 @@ const AboutUs = () => {
               <Grid2 container spacing={3} sx={{ mt: 3 }}>
                 {[
                   { to: 2024, label: "Founded" },
-                  { to: 14, label: "Students" },
+                  { to: 15, label: "Students" },
                   { to: 4, label: "Subteams" },
                 ].map((s) => (
                   <Grid2 key={s.label} size={4}>
