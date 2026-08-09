@@ -220,29 +220,6 @@ const MainApp = () => {
 
       <Marquee items={marqueeItems} />
 
-      {/* ABOUT TEASER */}
-      <Box sx={{ ...sectionSx, py: { xs: 6, md: 8 }, borderTop: "1px solid rgba(255,255,255,0.06)", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
-        <Container maxWidth="md">
-          <Reveal>
-            <Box sx={{ textAlign: "center" }}>
-              <Typography variant="overline" sx={{ color: "secondary.main", fontWeight: 700, letterSpacing: 2 }}>
-                ABOUT US
-              </Typography>
-              <Typography variant="h4" sx={{ mt: 1, mb: 2 }}>
-                FTC Team 25779, Chesterfield, Missouri
-              </Typography>
-              <Typography variant="body1" sx={{ color: "text.secondary", maxWidth: 640, mx: "auto", mb: 3 }}>
-                An entirely student-led robotics team building competition robots and bringing STEM to our
-                community since 2024.
-              </Typography>
-              <Button variant="outlined" color="primary" endIcon={<ArrowForwardIcon />} onClick={() => navigate("/aboutus")}>
-                Learn More About Us
-              </Button>
-            </Box>
-          </Reveal>
-        </Container>
-      </Box>
-
       {/* SEASON HIGHLIGHTS */}
       <Box sx={sectionSx}>
         <Container maxWidth="lg">
