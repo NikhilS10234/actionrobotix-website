@@ -47,7 +47,7 @@ const subteams = [
     members: [
       { name: "Ishaan Vitthala", grade: "Outreach Lead & Captain · 3rd Year", img: "Images/ishaan.png" },
       { name: "Naisha Salaria", grade: "Local Outreach · 2nd Year", img: "Images/Naisha.png" },
-      { name: "Avnika Malugu", grade: "International Outreach · Rookie" },
+      { name: "Anvika Malugu", grade: "International Outreach · Rookie" },
       { name: "Saideep Kondamadugula", grade: "Local Outreach · Rookie" },
     ],
   },
