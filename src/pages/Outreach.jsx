@@ -53,6 +53,7 @@ const programs = [
   {
     title: "Chess Cardinals Presentation",
     desc: "Presented FTC robotics to nearly 70 chess players and their parents at Chess Cardinals in Chesterfield — connecting robotics and chess through strategy and logic.",
+    img: "Images/ChessCardinals.png",
   },
 ];
 
