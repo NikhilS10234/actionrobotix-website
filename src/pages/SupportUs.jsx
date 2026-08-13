@@ -6,56 +6,95 @@ import HandshakeIcon from "@mui/icons-material/Handshake";
 import SchoolIcon from "@mui/icons-material/School";
 import PublicIcon from "@mui/icons-material/Public";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import InventoryIcon from "@mui/icons-material/Inventory";
+import MailIcon from "@mui/icons-material/Mail";
 import PageHero from "../components/PageHero";
 import Reveal from "../components/Reveal";
+import Counter from "../components/Counter";
 import PageTransition from "../components/PageTransition";
 import { glassCardSx, sectionSx } from "../components/styles";
 import usePageTitle from "../hooks/usePageTitle";
 
+const stats = [
+  { to: 15, label: "Student Members" },
+  { to: 3, label: "Year in FTC", suffix: "rd" },
+  { to: 10, suffix: "k+", label: "People Impacted" },
+  { to: 37, label: "Countries Reached" },
+];
+
 const reasons = [
   { icon: <SchoolIcon />, title: "STEM Access", desc: "Your support helps keep robotics accessible to students across the St. Louis area." },
-  { icon: <HandshakeIcon />, title: "Mentorship", desc: "We reinvest into mentoring younger FLL teams as we grow." },
+  { icon: <HandshakeIcon />, title: "Mentorship", desc: "We reinvest into mentoring younger FLL and rookie FTC teams as we grow." },
   { icon: <PublicIcon />, title: "Community Impact", desc: "From the Magic House to local schools, donations fund our outreach events." },
 ];
 
 const sponsors = [
   "Gene Haas Foundation",
-  "Jabil",
-  "FRC Tees",
-  "Actuonix Motion Devices",
-  "Polymaker",
-  "DEKA Foundation",
-  "Bosch",
-  "Mastercard",
   "Hunt Family Foundation",
+  "MiSUMi",
+  "Kansas City Chiefs",
+  "Polymaker",
+  "SendCutSend",
   "St. Louis Cardinals Care Community Fund",
 ];
 
-const income = [
-  ["Gene Haas Foundation", "$2,000"],
-  ["2024–25 Balance Carryover", "$1,350"],
-  ["FTC 2nd Year Grant", "$750"],
-  ["Sports Foundations", "$555"],
-];
-
 const expenses = [
-  ["Robot Parts", "$1,932.44"],
-  ["Odometry / Sensors", "$682.81"],
-  ["Full Season Set", "$555.12"],
-  ["Electronics", "$498.22"],
-];
-
-const fundraisers = [
-  "Raffled a Kansas City Chiefs signed football",
-  "Raised $500+ for FIRST Programs across Missouri",
-  "Hosted a 3D-printed filament recycling drive (6+ lbs donated)",
+  ["Outreach Supplies", "$1,000"],
+  ["New Tools & Parts", "$2,000"],
+  ["FTC & Event Registration", "$900"],
+  ["3D Printing & CNC", "$1,500"],
+  ["Game Set", "$500"],
+  ["Travel & Food", "$2,000"],
+  ["Team Apparel", "$600"],
 ];
 
 const tiers = [
-  { name: "Bronze", perks: ["Name listed on our website", "Shoutout on social media"] },
-  { name: "Silver", perks: ["Everything in Bronze", "Logo on our website", "Mentioned in team updates"], featured: false },
-  { name: "Gold", perks: ["Everything in Silver", "Logo featured on our robot", "Invitation to competitions"], featured: true },
-  { name: "Title Sponsor", perks: ["Everything in Gold", "Top billing on our Marketing Packet", "Direct partnership with team leadership"] },
+  {
+    name: "Tier 1: The Gear",
+    range: "$1 – $499.99",
+    perks: ["Listed on website", "Sent updates on our progress", "Thank-you notes from team"],
+  },
+  {
+    name: "Tier 2: The Wheel",
+    range: "$500 – $999.99",
+    perks: ["All Tier 1 benefits, plus:", "Logo/name on shirt (small)", "Link on website", "Help with local efforts", "Name listed on our sponsor banner", "Season recap report at year end"],
+  },
+  {
+    name: "Tier 3: The Wiring",
+    range: "$1,000 – $1,999.99",
+    perks: ["All Tier 2 benefits, plus:", "Logo/name on shirt (medium)", "Logo on robot", "Shoutouts on social media", "Logo on our pit banner", "Thank-you post on social media", "Invitation to team demo days"],
+    featured: true,
+  },
+  {
+    name: "Tier 4: The Hub",
+    range: "$2,000.00 +",
+    perks: [
+      "All Tier 3 benefits, plus:",
+      "Logo/name on shirt (large)",
+      "Company logo at our pit",
+      "Logo on marketing materials",
+      "Title placement on our website and banner",
+      "Logo in outreach handouts and slides",
+      "Robot demo at one company event",
+      "Feature in our mid-season newsletter",
+      "Logo on our competition robot in premium position",
+      "Team appearance at a company or recruiting event",
+      "Named recognition in award submissions and press",
+    ],
+  },
+];
+
+const donateOnlineSteps = [
+  "Choose your donation amount and method",
+  "In the instructions box, add your company name + our team name",
+  "Fill out payment information",
+];
+
+const donateCheckSteps = [
+  "Pay out to SLSRA",
+  "Put memo as “Action Robotix Donation”",
+  "Fill out the rest with payment amount and details",
+  "Mail the check in an envelope to P.O. Box 145, Grover, MO 63040",
 ];
 
 const SupportUs = () => {
@@ -67,8 +106,28 @@ const SupportUs = () => {
     <PageHero
       eyebrow="FUEL OUR SEASON"
       title="Support Action Robotix"
-      subtitle="Parts, registration, tools, and travel add up fast. Every dollar raised supports the team's growth and helps finance our objectives for the 2024–25 FTC season."
+      subtitle="For the 2026–27 FTC season, we estimate needing $8,500 to compete. Every contribution — big or small — helps us build, travel, and keep bringing robotics to our community."
     />
+
+    {/* STATS */}
+    <Box sx={{ ...sectionSx, pt: 0 }}>
+      <Container maxWidth="lg">
+        <Grid2 container spacing={4}>
+          {stats.map((s, i) => (
+            <Grid2 key={s.label} size={{ xs: 6, md: 3 }}>
+              <Reveal delay={i * 0.08}>
+                <Box sx={{ textAlign: "center" }}>
+                  <Counter to={s.to} suffix={s.suffix} variant="h3" sx={{ color: "primary.light" }} />
+                  <Typography variant="body2" sx={{ color: "text.secondary", mt: 1, fontWeight: 600 }}>
+                    {s.label}
+                  </Typography>
+                </Box>
+              </Reveal>
+            </Grid2>
+          ))}
+        </Grid2>
+      </Container>
+    </Box>
 
     <Box sx={sectionSx}>
       <Container maxWidth="lg">
@@ -81,8 +140,9 @@ const SupportUs = () => {
                   Donate to Our Team
                 </Typography>
                 <Typography variant="body1" sx={{ color: "text.secondary", mb: 3, flexGrow: 1 }}>
-                  One of the best ways to help is donating to our team's GoFundMe. We are truly grateful for
-                  every contribution, and it directly supports our ability to compete this season.
+                  Donations go through the St. Louis Student Robotics Association (SLSRA) on our behalf. SLSRA
+                  is 501(c)(3) certified, so your donation is tax-deductible — just note "Action Robotix - Team
+                  25779" with your gift.
                 </Typography>
                 <Box sx={{ display: "flex", alignItems: "center", gap: 3, flexWrap: "wrap" }}>
                   <Button
@@ -91,15 +151,15 @@ const SupportUs = () => {
                     size="large"
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.gofundme.com/f/Robotix-international"
+                    href="https://www.paypal.com/donate?token=KifjwRbbpdFpMUz15_NpA0Io7T5WPVbVbNtohuyC7bCfRHVKS217CCtrgXGbx0FQPPc2szj3snAwzGOt"
                   >
                     Donate Now
                   </Button>
                   <Box
                     component="img"
-                    src="Images/QRCode.jpg"
+                    src="Images/QRCode.png"
                     alt="Scan to donate"
-                    sx={{ height: 100, width: 100, borderRadius: 2, border: "1px solid rgba(255,255,255,0.1)" }}
+                    sx={{ height: 100, width: 100, borderRadius: 2, border: "1px solid rgba(255,255,255,0.1)", bgcolor: "#fff", p: 0.5 }}
                   />
                 </Box>
               </Box>
@@ -115,8 +175,8 @@ const SupportUs = () => {
                 </Typography>
                 <Typography variant="body1" sx={{ color: "text.secondary", mb: 3, flexGrow: 1 }}>
                   If you or a company you're affiliated with is interested in sponsoring us, check out our
-                  Marketing Packet — it outlines our team's history and goals, how we help the community,
-                  and the ways and benefits of partnering with us.
+                  2026–27 Marketing Packet — it outlines our team's goals, how we help the community, and the
+                  ways and benefits of partnering with us.
                 </Typography>
                 <Box sx={{ display: "flex", alignItems: "center", gap: 3, flexWrap: "wrap" }}>
                   <Button
@@ -125,7 +185,7 @@ const SupportUs = () => {
                     size="large"
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://drive.google.com/file/d/1s7wc0u2HNA8D4mPnVXOmPtAwsu6trrUq/view"
+                    href="docs/Action-Robotix-Marketing-Packet-2026-27.pdf"
                   >
                     View Marketing Packet
                   </Button>
@@ -143,7 +203,7 @@ const SupportUs = () => {
       </Container>
     </Box>
 
-    <Box sx={{ ...sectionSx, pb: { xs: 10, md: 14 } }}>
+    <Box sx={sectionSx}>
       <Container maxWidth="lg">
         <Reveal>
           <Box sx={{ textAlign: "center", mb: 6 }}>
@@ -214,84 +274,47 @@ const SupportUs = () => {
       </Container>
     </Box>
 
-    {/* BUDGET SNAPSHOT */}
+    {/* BUDGET */}
     <Box sx={sectionSx}>
-      <Container maxWidth="lg">
+      <Container maxWidth="md">
         <Reveal>
           <Box sx={{ textAlign: "center", mb: 6 }}>
             <Typography variant="overline" sx={{ color: "secondary.main", fontWeight: 700, letterSpacing: 2 }}>
-              TRANSPARENCY
+              WHY YOUR SUPPORT MATTERS
             </Typography>
             <Typography variant="h3" sx={{ mt: 1, mb: 1.5 }}>
-              2025–26 Budget Snapshot
+              2026–27 Estimated Budget
             </Typography>
             <Typography variant="body1" sx={{ color: "text.secondary" }}>
-              Total income and expenses this season: <Box component="span" sx={{ fontWeight: 700, color: "primary.light" }}>$5,905</Box>
+              What we expect to need this season: <Box component="span" sx={{ fontWeight: 700, color: "primary.light" }}>$8,500</Box>
             </Typography>
           </Box>
         </Reveal>
-        <Grid2 container spacing={4}>
-          <Grid2 size={{ xs: 12, md: 4 }}>
-            <Reveal delay={0}>
-              <Box sx={{ ...glassCardSx, p: 4, height: "100%" }}>
-                <Typography variant="h6" sx={{ mb: 2 }}>
-                  Major Income
+        <Reveal>
+          <Box sx={{ ...glassCardSx, p: { xs: 3, md: 4 } }}>
+            {expenses.map(([label, amount]) => (
+              <Box key={label} sx={{ display: "flex", justifyContent: "space-between", mb: 1.5, pb: 1.5, borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
+                <Typography variant="body1" sx={{ color: "text.secondary" }}>
+                  {label}
                 </Typography>
-                {income.map(([label, amount]) => (
-                  <Box key={label} sx={{ display: "flex", justifyContent: "space-between", mb: 1.2, pb: 1.2, borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
-                    <Typography variant="body2" sx={{ color: "text.secondary" }}>
-                      {label}
-                    </Typography>
-                    <Typography variant="body2" sx={{ fontWeight: 700 }}>
-                      {amount}
-                    </Typography>
-                  </Box>
-                ))}
-              </Box>
-            </Reveal>
-          </Grid2>
-          <Grid2 size={{ xs: 12, md: 4 }}>
-            <Reveal delay={0.1}>
-              <Box sx={{ ...glassCardSx, p: 4, height: "100%" }}>
-                <Typography variant="h6" sx={{ mb: 2 }}>
-                  Major Expenses
+                <Typography variant="body1" sx={{ fontWeight: 700 }}>
+                  {amount}
                 </Typography>
-                {expenses.map(([label, amount]) => (
-                  <Box key={label} sx={{ display: "flex", justifyContent: "space-between", mb: 1.2, pb: 1.2, borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
-                    <Typography variant="body2" sx={{ color: "text.secondary" }}>
-                      {label}
-                    </Typography>
-                    <Typography variant="body2" sx={{ fontWeight: 700 }}>
-                      {amount}
-                    </Typography>
-                  </Box>
-                ))}
               </Box>
-            </Reveal>
-          </Grid2>
-          <Grid2 size={{ xs: 12, md: 4 }}>
-            <Reveal delay={0.2}>
-              <Box sx={{ ...glassCardSx, p: 4, height: "100%" }}>
-                <Typography variant="h6" sx={{ mb: 2 }}>
-                  Fundraisers
-                </Typography>
-                {fundraisers.map((f) => (
-                  <Box key={f} sx={{ display: "flex", gap: 1.5, mb: 1.5, alignItems: "flex-start" }}>
-                    <Box sx={{ width: 6, height: 6, borderRadius: "50%", bgcolor: "secondary.main", mt: 1, flexShrink: 0 }} />
-                    <Typography variant="body2" sx={{ color: "text.secondary" }}>
-                      {f}
-                    </Typography>
-                  </Box>
-                ))}
-              </Box>
-            </Reveal>
-          </Grid2>
-        </Grid2>
+            ))}
+            <Box sx={{ display: "flex", justifyContent: "space-between", pt: 1 }}>
+              <Typography variant="h6">Total</Typography>
+              <Typography variant="h6" sx={{ color: "secondary.light", fontWeight: 800 }}>
+                $8,500.00
+              </Typography>
+            </Box>
+          </Box>
+        </Reveal>
       </Container>
     </Box>
 
     {/* SPONSORSHIP TIERS */}
-    <Box sx={{ ...sectionSx, pb: { xs: 10, md: 14 } }}>
+    <Box sx={sectionSx}>
       <Container maxWidth="lg">
         <Reveal>
           <Box sx={{ textAlign: "center", mb: 6 }}>
@@ -329,18 +352,28 @@ const SupportUs = () => {
                       sx={{ position: "absolute", top: -12, left: "50%", transform: "translateX(-50%)", bgcolor: "secondary.main", color: "#0a0e17", fontWeight: 700 }}
                     />
                   )}
-                  <Typography variant="h6" sx={{ mb: 2, textAlign: "center", fontWeight: 800 }}>
+                  <Typography variant="h6" sx={{ mb: 0.5, textAlign: "center", fontWeight: 800 }}>
                     {t.name}
                   </Typography>
+                  <Typography variant="body2" sx={{ mb: 2, textAlign: "center", color: "primary.light", fontWeight: 700 }}>
+                    {t.range}
+                  </Typography>
                   <Box sx={{ display: "flex", flexDirection: "column", gap: 1.2, flexGrow: 1 }}>
-                    {t.perks.map((perk) => (
-                      <Box key={perk} sx={{ display: "flex", alignItems: "flex-start", gap: 1 }}>
-                        <CheckCircleIcon sx={{ fontSize: 18, color: "primary.light", mt: 0.3 }} />
-                        <Typography variant="body2" sx={{ color: "text.secondary" }}>
+                    {t.perks.map((perk) => {
+                      const isHeader = perk.endsWith(":");
+                      return isHeader ? (
+                        <Typography key={perk} variant="caption" sx={{ color: "text.secondary", fontStyle: "italic", mt: 0.5 }}>
                           {perk}
                         </Typography>
-                      </Box>
-                    ))}
+                      ) : (
+                        <Box key={perk} sx={{ display: "flex", alignItems: "flex-start", gap: 1 }}>
+                          <CheckCircleIcon sx={{ fontSize: 18, color: "primary.light", mt: 0.3, flexShrink: 0 }} />
+                          <Typography variant="body2" sx={{ color: "text.secondary" }}>
+                            {perk}
+                          </Typography>
+                        </Box>
+                      );
+                    })}
                   </Box>
                 </Box>
               </Reveal>
@@ -352,6 +385,60 @@ const SupportUs = () => {
             Contact Us About Sponsorship
           </Button>
         </Box>
+      </Container>
+    </Box>
+
+    {/* IN-KIND SUPPORT + HOW TO DONATE */}
+    <Box sx={{ ...sectionSx, pb: { xs: 10, md: 14 } }}>
+      <Container maxWidth="lg">
+        <Grid2 container spacing={3}>
+          <Grid2 size={{ xs: 12, md: 4 }}>
+            <Reveal delay={0}>
+              <Box sx={{ ...glassCardSx, p: 3.5, height: "100%" }}>
+                <InventoryIcon sx={{ color: "primary.light", fontSize: 32, mb: 1.5 }} />
+                <Typography variant="h6" sx={{ mb: 1.5 }}>
+                  In-Kind Support
+                </Typography>
+                <Typography variant="body2" sx={{ color: "text.secondary" }}>
+                  Support doesn't have to be a check. Product and service donations count toward the same
+                  tiers at retail value — Polymaker donated filament for our 3D printing, and SendCutSend
+                  covered laser parts for our drivetrain. We also welcome machining or manufacturing services,
+                  software licenses, meeting or event space, and employee mentorship hours.
+                </Typography>
+              </Box>
+            </Reveal>
+          </Grid2>
+          <Grid2 size={{ xs: 12, md: 4 }}>
+            <Reveal delay={0.1}>
+              <Box sx={{ ...glassCardSx, p: 3.5, height: "100%" }}>
+                <FavoriteIcon sx={{ color: "primary.light", fontSize: 32, mb: 1.5 }} />
+                <Typography variant="h6" sx={{ mb: 1.5 }}>
+                  Online (Credit / Debit / PayPal)
+                </Typography>
+                {donateOnlineSteps.map((s, i) => (
+                  <Typography key={s} variant="body2" sx={{ color: "text.secondary", mb: 1 }}>
+                    {i + 1}. {s}
+                  </Typography>
+                ))}
+              </Box>
+            </Reveal>
+          </Grid2>
+          <Grid2 size={{ xs: 12, md: 4 }}>
+            <Reveal delay={0.2}>
+              <Box sx={{ ...glassCardSx, p: 3.5, height: "100%" }}>
+                <MailIcon sx={{ color: "primary.light", fontSize: 32, mb: 1.5 }} />
+                <Typography variant="h6" sx={{ mb: 1.5 }}>
+                  Check (Mailed)
+                </Typography>
+                {donateCheckSteps.map((s, i) => (
+                  <Typography key={s} variant="body2" sx={{ color: "text.secondary", mb: 1 }}>
+                    {i + 1}. {s}
+                  </Typography>
+                ))}
+              </Box>
+            </Reveal>
+          </Grid2>
+        </Grid2>
       </Container>
     </Box>
   </PageTransition>
