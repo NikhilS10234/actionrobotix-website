@@ -29,8 +29,8 @@ const Podcast = () => {
     <PageTransition>
       <PageHero
         eyebrow="ROOKIE SUPPORT"
-        title="The Action Robotix Podcast"
-        subtitle="Conversations about FTC strategy, build season, mentorship, and lessons learned — aimed at helping rookie teams get up to speed faster."
+        title="The High Action Podcast"
+        subtitle="In collaboration with High Five Robotics — interviews with World-level robotics teams, professors, and industry professionals. New episodes every Sunday, 10–15 minutes."
       />
 
       {!isSupabaseConfigured ? (
@@ -55,8 +55,8 @@ const Podcast = () => {
                   We're just getting started
                 </Typography>
                 <Typography variant="body2" sx={{ color: "text.secondary", maxWidth: 480, mx: "auto" }}>
-                  No episodes are up yet — we're planning a podcast focused on helping rookie FTC teams navigate
-                  strategy, build, and outreach. Check back soon, or follow our{" "}
+                  No episodes are up yet — new episodes drop every Sunday and run 10–15 minutes. Check back soon,
+                  or follow our{" "}
                   <Button href="/community" size="small">Discord</Button> for updates.
                 </Typography>
               </Box>

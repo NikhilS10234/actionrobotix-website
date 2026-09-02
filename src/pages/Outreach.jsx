@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
 import GroupsIcon from "@mui/icons-material/Groups";
 import VideoLibraryIcon from "@mui/icons-material/VideoLibrary";
+import MicIcon from "@mui/icons-material/Mic";
 import PageHero from "../components/PageHero";
 import Reveal from "../components/Reveal";
 import PageTransition from "../components/PageTransition";
@@ -12,32 +13,27 @@ import usePageTitle from "../hooks/usePageTitle";
 const programs = [
   {
     title: "Bastian Solutions Facility Tour",
-    desc: "We visited the Bastian Solutions Robotics Facility in St. Louis to explore real-world industrial automation and robotics engineering — learning how large-scale systems operate in manufacturing and logistics, with insights from a Senior Automation Engineer.",
+    desc: "A behind-the-scenes look at industrial automation and robotics engineering in action.",
     img: "Images/BastianSolution.png",
   },
   {
     title: "Magic House Star Wars STEM Night",
-    desc: "Showcased two FTC robots, including a custom 3D-printed B2 bot, to over 400 community members at the Magic House's Star Wars Night — merging the excitement of Star Wars with real-world robotics.",
+    desc: "Showcased our FTC robots at a themed community STEM night.",
     img: "Images/magichouseevent.jpg",
   },
   {
     title: "Boeing STEAM & Space Day",
-    desc: "2,000+ attendees got hands-on robot driving time with our competition robot, as we shared robotics and STEM with families and enthusiasts of all ages.",
+    desc: "Shared robotics with families and students at a community STEAM event.",
     img: "Images/BOEING.png",
   },
   {
     title: "SciFest Robot Expo",
-    desc: "3,000+ attendees at the Science Center saw FTC robotics up close — from young kids to industry professionals — as we showcased our robot and let visitors take the controls.",
+    desc: "Brought FTC robotics to the Science Center for hands-on demos.",
     img: "Images/SCIFest.png",
   },
   {
-    title: "Social Media Success",
-    desc: "Grew our Instagram to 210+ followers across 30+ posts, generating 11,450+ tri-monthly impressions through build logs, competition highlights, and outreach content.",
-    img: "Images/IG.png",
-  },
-  {
     title: "Chess Cardinals Presentation",
-    desc: "Presented FTC robotics to nearly 70 chess players and their parents at Chess Cardinals in Chesterfield — connecting robotics and chess through strategy and logic.",
+    desc: "Introduced FTC robotics to local chess players and their families.",
     img: "Images/ChessCardinals.png",
   },
 ];
@@ -123,6 +119,33 @@ const Outreach = () => {
               </Grid2>
             ))}
           </Grid2>
+        </Container>
+      </Box>
+
+      {/* PODCAST */}
+      <Box sx={sectionSx}>
+        <Container maxWidth="md">
+          <Reveal>
+            <Box sx={{ ...glassCardSx, p: { xs: 3.5, md: 5 }, textAlign: "center" }}>
+              <MicIcon sx={{ fontSize: 44, color: "secondary.main", mb: 1.5 }} />
+              <Typography variant="overline" sx={{ color: "secondary.main", fontWeight: 700, letterSpacing: 2 }}>
+                NEW — IN COLLABORATION WITH HIGH FIVE ROBOTICS
+              </Typography>
+              <Typography variant="h3" sx={{ mt: 1, mb: 1.5 }}>
+                The High Action Podcast
+              </Typography>
+              <Typography variant="body1" sx={{ color: "text.secondary", maxWidth: 620, mx: "auto", mb: 1.5 }}>
+                Conversations with World-level robotics teams, professors, and industry professionals about how they
+                build, compete, and grow.
+              </Typography>
+              <Typography variant="body2" sx={{ color: "text.secondary", mb: 3 }}>
+                New episodes every Sunday · 10–15 minutes
+              </Typography>
+              <Button variant="contained" color="primary" onClick={() => navigate("/podcast")}>
+                Listen to the Podcast
+              </Button>
+            </Box>
+          </Reveal>
         </Container>
       </Box>
 
