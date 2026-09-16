@@ -60,6 +60,8 @@ const resources = [
   },
 ];
 
+const SPOTIFY_SHOW_URL = "https://open.spotify.com/show/2aXNuGO7tsYFWwN1PIkfTh?si=8425076218404cf5&nd=1&dlsi=c5779bedf2224569";
+
 const Outreach = () => {
   usePageTitle("Outreach");
   const navigate = useNavigate();
@@ -147,9 +149,14 @@ const Outreach = () => {
               <Typography variant="body2" sx={{ color: "text.secondary", mb: 3 }}>
                 New episodes every Sunday, 10 to 15 minutes
               </Typography>
-              <Button variant="contained" color="primary" onClick={() => navigate("/podcast")}>
-                Listen to the Podcast
-              </Button>
+              <Box sx={{ display: "flex", justifyContent: "center", gap: 1.5, flexWrap: "wrap" }}>
+                <Button variant="contained" color="primary" href={SPOTIFY_SHOW_URL} target="_blank" rel="noopener noreferrer">
+                  Listen on Spotify
+                </Button>
+                <Button variant="outlined" color="primary" onClick={() => navigate("/podcast")}>
+                  Podcast Episodes
+                </Button>
+              </Box>
             </Box>
           </Reveal>
         </Container>

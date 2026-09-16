@@ -11,6 +11,8 @@ import usePageTitle from "../hooks/usePageTitle";
 import { fetchPublishedEpisodes } from "../api/podcast";
 import { isSupabaseConfigured } from "../lib/supabaseClient";
 
+const SPOTIFY_SHOW_URL = "https://open.spotify.com/show/2aXNuGO7tsYFWwN1PIkfTh?si=8425076218404cf5&nd=1&dlsi=c5779bedf2224569";
+
 const Podcast = () => {
   usePageTitle("Podcast");
   const [episodes, setEpisodes] = useState([]);
@@ -32,6 +34,24 @@ const Podcast = () => {
         title="The High Action Podcast"
         subtitle="In collaboration with High Five Robotics, interviews with World-level robotics teams, professors, and industry professionals. New episodes every Sunday, 10 to 15 minutes."
       />
+
+      <Box sx={{ ...sectionSx, pb: 0 }}>
+        <Container maxWidth="md">
+          <Reveal>
+            <Box sx={{ ...glassCardSx, p: { xs: 3, md: 4 }, textAlign: "center" }}>
+              <Typography variant="h6" sx={{ mb: 1 }}>
+                Listen to The High Action Podcast
+              </Typography>
+              <Typography variant="body2" sx={{ color: "text.secondary", mb: 2.5 }}>
+                Find every episode on Spotify.
+              </Typography>
+              <Button variant="contained" color="primary" href={SPOTIFY_SHOW_URL} target="_blank" rel="noopener noreferrer">
+                Listen on Spotify
+              </Button>
+            </Box>
+          </Reveal>
+        </Container>
+      </Box>
 
       {!isSupabaseConfigured ? (
         <BackendNotice feature="The podcast" />
