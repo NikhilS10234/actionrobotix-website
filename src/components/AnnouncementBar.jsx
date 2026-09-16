@@ -8,8 +8,8 @@ import { isSupabaseConfigured } from "../lib/supabaseClient";
 
 const DEFAULT_ANNOUNCEMENT = {
   enabled: true,
-  version: "2026-season-default",
-  text: "The 2026–27 FTC season kicks off soon — the site will be changing as we prep!",
+  version: "2026-2027-biobuzz",
+  text: "The 2026-2027 FTC BioBuzz season has started!",
   link: "/season",
 };
 

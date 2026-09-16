@@ -38,7 +38,7 @@ const NotFound = () => {
             Looks like this page missed the field.
           </Typography>
           <Typography variant="body1" sx={{ color: "text.secondary", mb: 4 }}>
-            The page you're looking for doesn't exist — it may have been moved, renamed, or never built.
+            The page you're looking for doesn't exist. It may have been moved, renamed, or never built.
             Let's get you back on course.
           </Typography>
           <Button size="large" variant="contained" color="primary" startIcon={<HomeIcon />} onClick={() => navigate("/")}>

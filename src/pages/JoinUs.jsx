@@ -24,23 +24,23 @@ const benefits = [
 
 const subteams = [
   { icon: <BrushIcon />, title: "Design", desc: "CAD the robot in Fusion 360, sketch and model concepts, and drive our 6-step design cycle." },
-  { icon: <BuildIcon />, title: "Build", desc: "Fabricate and assemble the robot — from CNC aluminum chassis work to 3D-printed mechanisms." },
+  { icon: <BuildIcon />, title: "Build", desc: "Fabricate and assemble the robot, from CNC aluminum chassis work to 3D-printed mechanisms." },
   { icon: <CodeIcon />, title: "Programming", desc: "Write autonomous routines, PIDF control, and auto-aiming systems in Java with SolversLib and PedroPathing." },
   { icon: <CampaignIcon />, title: "Outreach", desc: "Run community events, mentor FLL teams, manage sponsorships, and share our story worldwide." },
 ];
 
 const steps = [
-  { title: "Reach Out", desc: "Send us a message through our Contact page — tell us a bit about yourself and what interests you." },
+  { title: "Reach Out", desc: "Send us a message through our Contact page and tell us a bit about yourself and what interests you." },
   { title: "Come Say Hi", desc: "Stop by one of our meetings to see how we work and meet the team in person." },
-  { title: "Pick a Sub-Team", desc: "Find the area that fits you best — programming, build, outreach, or media." },
+  { title: "Pick a Sub-Team", desc: "Find the area that fits you best: programming, build, outreach, or media." },
   { title: "Start Building", desc: "Jump into the current season and start contributing right away." },
 ];
 
 const faqs = [
-  { q: "Do I need robotics experience to join?", a: "No — we welcome members of all experience levels, from complete beginners to students who've competed before. What matters most is curiosity and a willingness to learn." },
+  { q: "Do I need robotics experience to join?", a: "No. We welcome members of all experience levels, from complete beginners to students who've competed before. What matters most is curiosity and a willingness to learn." },
   { q: "What's the time commitment?", a: "We meet regularly throughout the season (see our Contact page for current meeting times), with additional hours during intense build and competition periods." },
-  { q: "I'm not interested in engineering — can I still help?", a: "Absolutely. Outreach, business, marketing, and media are just as vital to our team as build and programming." },
-  { q: "Is there a cost to join?", a: "Robotics does involve costs for parts, registration, and travel — which is part of why we rely on community support. Reach out to us directly for specifics." },
+  { q: "I'm not interested in engineering. Can I still help?", a: "Absolutely. Outreach, business, marketing, and media are just as vital to our team as build and programming." },
+  { q: "Is there a cost to join?", a: "Robotics does involve costs for parts, registration, and travel, which is part of why we rely on community support. Reach out to us directly for specifics." },
 ];
 
 const JoinUs = () => {
@@ -52,7 +52,7 @@ const JoinUs = () => {
       <PageHero
         eyebrow="BUILD WITH US"
         title="Join Action Robotix"
-        subtitle="We're recruiting 9 new members for the 2026–27 season from our feeder FLL teams — Action Robotics-FLL, Eager Eagles, Golden Falcons, and Control-Alt-Delete — and we welcome curious, driven students of every background."
+        subtitle="We're recruiting 9 new members for the 2026-2027 BioBuzz season from our feeder FLL teams: Action Robotics-FLL, Eager Eagles, Golden Falcons, and Control-Alt-Delete. We welcome curious, driven students of every background."
       />
 
       {/* WHY JOIN */}

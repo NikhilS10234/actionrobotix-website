@@ -42,13 +42,13 @@ const resources = [
   {
     icon: <LibraryBooksIcon />,
     title: "FIRST Inspires",
-    desc: "The official home of FIRST — program guides, season materials, and everything a new team needs to get started.",
+    desc: "The official home of FIRST, with program guides, season materials, and everything a new team needs to get started.",
     href: "https://www.firstinspires.org/",
   },
   {
     icon: <GroupsIcon />,
     title: "Ask Us Anything",
-    desc: "Mentoring an FLL team or just getting started? Reach out — we're happy to share what's worked for us.",
+    desc: "Mentoring an FLL team or just getting started? Reach out. We're happy to share what's worked for us.",
     href: "/contactus",
     internal: true,
   },
@@ -129,8 +129,14 @@ const Outreach = () => {
             <Box sx={{ ...glassCardSx, p: { xs: 3.5, md: 5 }, textAlign: "center" }}>
               <MicIcon sx={{ fontSize: 44, color: "secondary.main", mb: 1.5 }} />
               <Typography variant="overline" sx={{ color: "secondary.main", fontWeight: 700, letterSpacing: 2 }}>
-                NEW — IN COLLABORATION WITH HIGH FIVE ROBOTICS
+                IN COLLABORATION WITH HIGH FIVE ROBOTICS
               </Typography>
+              <Box
+                component="img"
+                src="Images/podcast.avif"
+                alt="The High Action Podcast"
+                sx={{ width: "100%", maxWidth: 520, maxHeight: 280, objectFit: "cover", borderRadius: 3, display: "block", mx: "auto", my: 3 }}
+              />
               <Typography variant="h3" sx={{ mt: 1, mb: 1.5 }}>
                 The High Action Podcast
               </Typography>
@@ -139,7 +145,7 @@ const Outreach = () => {
                 build, compete, and grow.
               </Typography>
               <Typography variant="body2" sx={{ color: "text.secondary", mb: 3 }}>
-                New episodes every Sunday · 10–15 minutes
+                New episodes every Sunday, 10 to 15 minutes
               </Typography>
               <Button variant="contained" color="primary" onClick={() => navigate("/podcast")}>
                 Listen to the Podcast

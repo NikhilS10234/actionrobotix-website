@@ -76,7 +76,7 @@ const tiers = [
       "Title placement on our website and banner",
       "Logo in outreach handouts and slides",
       "Robot demo at one company event",
-      "Feature in our mid-season newsletter",
+      "Feature in our mid-season team update",
       "Logo on our competition robot in premium position",
       "Team appearance at a company or recruiting event",
       "Named recognition in award submissions and press",
@@ -106,7 +106,7 @@ const SupportUs = () => {
     <PageHero
       eyebrow="FUEL OUR SEASON"
       title="Support Action Robotix"
-      subtitle="For the 2026–27 FTC season, we estimate needing $8,500 to compete. Every contribution — big or small — helps us build, travel, and keep bringing robotics to our community."
+      subtitle="For the 2026-2027 BioBuzz FTC season, we estimate needing $8,500 to compete. Every contribution, big or small, helps us build, travel, and keep bringing robotics to our community."
     />
 
     {/* STATS */}
@@ -141,7 +141,7 @@ const SupportUs = () => {
                 </Typography>
                 <Typography variant="body1" sx={{ color: "text.secondary", mb: 3, flexGrow: 1 }}>
                   Donations go through the St. Louis Student Robotics Association (SLSRA) on our behalf. SLSRA
-                  is 501(c)(3) certified, so your donation is tax-deductible — just note "Action Robotix - Team
+                  is 501(c)(3) certified, so your donation is tax-deductible. Just note "Action Robotix - Team
                   25779" with your gift.
                 </Typography>
                 <Box sx={{ display: "flex", alignItems: "center", gap: 3, flexWrap: "wrap" }}>
@@ -175,7 +175,7 @@ const SupportUs = () => {
                 </Typography>
                 <Typography variant="body1" sx={{ color: "text.secondary", mb: 3, flexGrow: 1 }}>
                   If you or a company you're affiliated with is interested in sponsoring us, check out our
-                  2026–27 Marketing Packet — it outlines our team's goals, how we help the community, and the
+                  2026-2027 Marketing Packet. It outlines our team's goals, how we help the community, and the
                   ways and benefits of partnering with us.
                 </Typography>
                 <Box sx={{ display: "flex", alignItems: "center", gap: 3, flexWrap: "wrap" }}>
@@ -247,7 +247,7 @@ const SupportUs = () => {
               Our Sponsors
             </Typography>
             <Typography variant="body1" sx={{ color: "text.secondary", maxWidth: 640, mx: "auto" }}>
-              These organizations make our season possible. Special credit to SendCutSend and Polymaker —
+              These organizations make our season possible. Special credit to SendCutSend and Polymaker,
               parts of our robot are literally built around their donated materials and services.
             </Typography>
           </Box>
@@ -283,7 +283,7 @@ const SupportUs = () => {
               WHY YOUR SUPPORT MATTERS
             </Typography>
             <Typography variant="h3" sx={{ mt: 1, mb: 1.5 }}>
-              2026–27 Estimated Budget
+              2026-2027 BioBuzz Estimated Budget
             </Typography>
             <Typography variant="body1" sx={{ color: "text.secondary" }}>
               What we expect to need this season: <Box component="span" sx={{ fontWeight: 700, color: "primary.light" }}>$8,500</Box>
@@ -401,7 +401,7 @@ const SupportUs = () => {
                 </Typography>
                 <Typography variant="body2" sx={{ color: "text.secondary" }}>
                   Support doesn't have to be a check. Product and service donations count toward the same
-                  tiers at retail value — Polymaker donated filament for our 3D printing, and SendCutSend
+                  tiers at retail value. Polymaker donated filament for our 3D printing, and SendCutSend
                   covered laser parts for our drivetrain. We also welcome machining or manufacturing services,
                   software licenses, meeting or event space, and employee mentorship hours.
                 </Typography>

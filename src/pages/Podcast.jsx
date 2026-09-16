@@ -30,7 +30,7 @@ const Podcast = () => {
       <PageHero
         eyebrow="ROOKIE SUPPORT"
         title="The High Action Podcast"
-        subtitle="In collaboration with High Five Robotics — interviews with World-level robotics teams, professors, and industry professionals. New episodes every Sunday, 10–15 minutes."
+        subtitle="In collaboration with High Five Robotics, interviews with World-level robotics teams, professors, and industry professionals. New episodes every Sunday, 10 to 15 minutes."
       />
 
       {!isSupabaseConfigured ? (
@@ -55,9 +55,7 @@ const Podcast = () => {
                   We're just getting started
                 </Typography>
                 <Typography variant="body2" sx={{ color: "text.secondary", maxWidth: 480, mx: "auto" }}>
-                  No episodes are up yet — new episodes drop every Sunday and run 10–15 minutes. Check back soon,
-                  or follow our{" "}
-                  <Button href="/community" size="small">Discord</Button> for updates.
+                  No episodes are up yet. New episodes drop every Sunday and run 10 to 15 minutes. Check back soon.
                 </Typography>
               </Box>
             )}

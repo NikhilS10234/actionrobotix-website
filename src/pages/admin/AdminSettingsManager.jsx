@@ -56,7 +56,7 @@ const AdminSettingsManager = () => {
         <Typography variant="h6" sx={{ mb: 2 }}>
           Site-Wide Announcement Bar
         </Typography>
-        {saved === "announcement" && <Alert severity="success" sx={{ mb: 2 }}>Saved — this re-shows the banner to visitors who already dismissed it.</Alert>}
+        {saved === "announcement" && <Alert severity="success" sx={{ mb: 2 }}>Saved. This re-shows the banner to visitors who already dismissed it.</Alert>}
         <FormControlLabel
           control={<Switch checked={announcement.enabled} onChange={(e) => setAnnouncement((a) => ({ ...a, enabled: e.target.checked }))} />}
           label="Enabled"

@@ -62,28 +62,28 @@ const coaches = [
 
 const results = [
   {
-    title: "League Tournament",
-    robot: "Inhibitor",
-    award: "1st — Sustain Award",
-    detail: "101.17 point average across the tournament.",
+    title: "BioBuzz Strategy",
+    robot: "2026-2027",
+    award: "Game analysis in progress",
+    detail: "The team is evaluating the BioBuzz game and planning our approach.",
   },
   {
-    title: "Eastern Missouri Super Qualifier",
-    robot: "Catalyst",
-    award: "1st — Inspire Award + Winning Alliance",
-    detail: "135.5 point average — top honor and the alliance title in one event.",
+    title: "Robot Design",
+    robot: "BioBuzz Robot",
+    award: "Prototyping underway",
+    detail: "Design, build, and programming are collaborating on our first competition robot iteration.",
   },
   {
-    title: "MO/KS State Championship & League Tournament",
-    robot: "Catalyst V2",
-    award: "1st — Sustain Award",
-    detail: "Placed 8th in Advancement Points and qualified for the Chicago Robotics Invitational (CRI).",
+    title: "Team Preparation",
+    robot: "BioBuzz Robot",
+    award: "Practice in progress",
+    detail: "We are preparing systems, documentation, and drive practice for the season ahead.",
   },
   {
-    title: "Chicago Robotics Invitational",
-    robot: "Catalyst 2.0",
-    award: "Qualified & Competed",
-    detail: "Brought our third robot iteration to compete against some of the best teams in the country.",
+    title: "Competition Season",
+    robot: "BioBuzz Robot",
+    award: "Scrimmages and qualifiers ahead",
+    detail: "Follow our progress as we test, improve, and compete throughout 2026-2027.",
   },
 ];
 
@@ -142,7 +142,7 @@ const AboutUs = () => {
     <PageHero
       eyebrow="OUR STORY"
       title="About Action Robotix"
-      subtitle="FTC Team 25779 — an entirely student-led robotics team from Chesterfield, Missouri, now in our second season."
+      subtitle="FTC Team 25779, an entirely student-led robotics team from Chesterfield, Missouri, now in the 2026-2027 BioBuzz season."
     />
 
     {/* MISSION */}
@@ -170,11 +170,11 @@ const AboutUs = () => {
               <Typography variant="body1" sx={{ color: "text.secondary", mb: 2 }}>
                 To design cutting-edge robotics solutions and foster a passion for STEM in our community,
                 through collaboration and outreach, while maintaining a welcoming and inclusive environment
-                for everyone — from aspiring engineers to artists.
+                for everyone, from aspiring engineers to artists.
               </Typography>
               <Typography variant="body1" sx={{ color: "text.secondary" }}>
                 Founded in 2024, we're entirely student-led: captains and division leads manage our teams,
-                projects, and goals across four subteams, each with its own training pipeline — backed by an
+                projects, and goals across four subteams, each with its own training pipeline, backed by an
                 extensive mentor network of industry professionals, university professors, and fellow FIRST
                 members.
               </Typography>
@@ -210,7 +210,7 @@ const AboutUs = () => {
               Meet Our Team
             </Typography>
             <Typography variant="body1" sx={{ color: "text.secondary", maxWidth: 640, mx: "auto" }}>
-              Four subteams — Design, Build, Programming, and Outreach — each led by captains who manage
+              Four subteams: Design, Build, Programming, and Outreach. Each is led by captains who manage
               projects, train new members, and set the team's goals.
             </Typography>
           </Box>
@@ -294,10 +294,10 @@ const AboutUs = () => {
         <Reveal>
           <Box sx={{ textAlign: "center", mb: 8 }}>
             <Typography variant="overline" sx={{ color: "secondary.main", fontWeight: 700, letterSpacing: 2 }}>
-              2025–26 DECODE SEASON
+              2026-2027 BIOBUZZ SEASON
             </Typography>
             <Typography variant="h3" sx={{ mt: 1 }}>
-              Awards & Results
+              Season in Progress
             </Typography>
           </Box>
         </Reveal>

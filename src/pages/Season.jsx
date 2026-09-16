@@ -14,19 +14,19 @@ import { fetchSetting } from "../api/settings";
 import { isSupabaseConfigured } from "../lib/supabaseClient";
 
 const DEFAULT_BLURB = {
-  heading: "The 2026–27 FTC Season Is Almost Here",
-  body: "We are gearing up for the new game reveal. Expect the site to change a lot over the next few months as we roll out new pages, robot builds, and team updates.",
+  heading: "The 2026-2027 BioBuzz Season Has Started",
+  body: "BioBuzz is underway. Our team is studying the game, developing our robot, and sharing updates throughout the season.",
 };
 
 const timeline = [
-  { icon: <RocketLaunchIcon />, title: "Game Reveal", desc: "The new FTC game for 2026–27 is announced and our strategy planning begins." },
-  { icon: <BuildIcon />, title: "Build Season", desc: "Design, prototype, and build our robot for the new challenge." },
-  { icon: <GroupsIcon />, title: "Recruiting", desc: "We'll be welcoming new members — check the Join Us page to get involved." },
-  { icon: <EventIcon />, title: "Scrimmages & Qualifiers", desc: "Practice matches and regional qualifying tournaments kick off." },
+  { icon: <RocketLaunchIcon />, title: "BioBuzz Is Here", desc: "The 2026-2027 FTC game has begun, and our strategy work is underway." },
+  { icon: <BuildIcon />, title: "Robot Development", desc: "We are designing, prototyping, building, and programming for BioBuzz." },
+  { icon: <GroupsIcon />, title: "Team Growth", desc: "New members are joining the work across design, build, programming, and outreach." },
+  { icon: <EventIcon />, title: "Scrimmages & Qualifiers", desc: "Practice matches and regional qualifying tournaments are ahead." },
 ];
 
 const Season = () => {
-  usePageTitle("2026–27 Season");
+  usePageTitle("2026-2027 BioBuzz Season");
   const navigate = useNavigate();
   const [blurb, setBlurb] = useState(DEFAULT_BLURB);
 
@@ -78,14 +78,14 @@ const Season = () => {
           <Reveal>
             <Box sx={{ textAlign: "center", mt: 8 }}>
               <Typography variant="body1" sx={{ color: "text.secondary", mb: 3 }}>
-                Want to be part of it? Join the team or follow along in our community.
+                Want to be part of BioBuzz? Join the team or follow our progress on social media.
               </Typography>
               <Box sx={{ display: "flex", gap: 2, justifyContent: "center", flexWrap: "wrap" }}>
                 <Button variant="contained" color="primary" onClick={() => navigate("/join")}>
                   Join Us
                 </Button>
-                <Button variant="outlined" color="secondary" onClick={() => navigate("/community")}>
-                  Join the Community
+                <Button variant="outlined" color="secondary" onClick={() => navigate("/outreach")}>
+                  Follow Our Outreach
                 </Button>
               </Box>
             </Box>

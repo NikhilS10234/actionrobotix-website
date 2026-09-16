@@ -29,7 +29,7 @@ const ForumSignIn = ({ redirectPath }) => {
     return (
       <Box sx={{ ...glassCardSx, p: 3, textAlign: "center" }}>
         <Typography variant="body1">
-          Check <strong>{email}</strong> for a sign-in link — click it to come back here and post.
+          Check <strong>{email}</strong> for a sign-in link. Click it to come back here and post.
         </Typography>
       </Box>
     );
@@ -38,7 +38,7 @@ const ForumSignIn = ({ redirectPath }) => {
   return (
     <Box component="form" onSubmit={handleSubmit} sx={{ ...glassCardSx, p: 3 }}>
       <Typography variant="body2" sx={{ color: "text.secondary", mb: 2 }}>
-        Sign in with your email to post — no password needed, just a one-click link. Anyone can join the
+        Sign in with your email to post. No password needed, just a one-click link. Anyone can join the
         conversation.
       </Typography>
       {error && <Alert severity="error" sx={{ mb: 2 }}>{error}</Alert>}

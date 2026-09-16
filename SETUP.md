@@ -1,8 +1,7 @@
 # Backend Setup (Supabase)
 
-The blog, portfolio database, newsletter signup, and admin panel all need a
-Supabase project. This is a one-time setup only your team can do (it needs
-you to create/own the account).
+The forum, podcast, site settings, and admin panel need a Supabase project.
+This is a one-time setup only your team can do.
 
 ## 1. Create a Supabase project
 
@@ -14,7 +13,7 @@ you to create/own the account).
 
 1. In the Supabase dashboard, open **SQL Editor** → **New query**.
 2. Paste the entire contents of [`supabase/schema.sql`](supabase/schema.sql) from this repo and click **Run**.
-3. This creates the `blog_posts`, `team_portfolios`, `newsletter_subscribers`, and `site_settings` tables, seeds two default settings rows, and sets up the access rules (public visitors can read published content and submit portfolios/newsletter emails; only signed-in team accounts can manage everything).
+3. This creates the `site_settings` table and seeds the BioBuzz announcement and season content.
 
 ## 3. Connect the site to your project
 
@@ -25,14 +24,14 @@ you to create/own the account).
    REACT_APP_SUPABASE_URL=https://your-project.supabase.co
    REACT_APP_SUPABASE_ANON_KEY=your-anon-key
    ```
-4. Restart `npm start` if it's running — Create React App only reads `.env` on startup.
+4. Restart `npm start` if it's running. Create React App only reads `.env` on startup.
 
-Until this is done, the blog/portfolios/community/admin pages show a "not set
-up yet" message instead of crashing — the rest of the site works normally.
+Until this is done, the forum, podcast, and admin pages show a "not set up yet"
+message instead of crashing. The rest of the site works normally.
 
 ## 4. Create admin (team) accounts
 
-There is no public sign-up page — that's intentional, since any signed-in
+There is no public sign-up page. That's intentional, since any signed-in
 account can manage the whole site. To create an account for a team member:
 
 1. In the Supabase dashboard, go to **Authentication → Users → Add user**.
@@ -41,14 +40,10 @@ account can manage the whole site. To create an account for a team member:
 
 ## 5. What you can manage from `/admin`
 
-- **Blog** — write/edit/delete posts (Markdown content), toggle published/draft.
-- **Portfolios** — approve, unapprove, or delete team portfolio submissions.
-- **Newsletter** — view subscriber list, export as CSV, remove subscribers.
-- **Site Settings** — edit the site-wide announcement banner text/link/on-off, and the `/season` page's heading/body.
+- **Podcast**: add, edit, or remove podcast episodes.
+- **Forum**: moderate public forum threads and replies.
+- **Site Settings**: edit the site-wide announcement banner and the `/season` page content.
 
 ## Notes / things intentionally out of scope
 
-- **Sending newsletter campaigns**: this only captures emails. To actually send a newsletter, export the CSV from `/admin` and use whatever email tool you choose (Mailchimp, Buttondown, etc.) — that needs its own account/setup.
-- **Discord**: the invite link on `/community` is a placeholder (`https://discord.gg/REPLACE_ME`). Update `DISCORD_INVITE_URL` in `src/pages/Community.jsx` once you have a real server invite.
-- **Portfolio submissions are links, not file uploads** — teams submit a link to a Drive/PDF they host elsewhere, so there's no file storage to manage.
-- **Donations**: the Support Us page still links out to GoFundMe rather than processing payments on-site, since that would need a payment processor account (Stripe, etc.) and PCI-compliance-relevant backend work.
+- **Donations**: the Support Us page still links out to GoFundMe rather than processing payments on-site, since that would need a payment processor account and PCI-compliance-relevant backend work.

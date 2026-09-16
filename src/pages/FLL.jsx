@@ -47,7 +47,7 @@ const FLL = () => {
                 (ages 6–10), and Challenge (ages 9–16).
               </Typography>
               <Typography variant="body1" sx={{ color: "text.secondary" }}>
-                It's often the very first robotics experience a student has — and it's where many
+                It's often the very first robotics experience a student has, and it's where many
                 Action Robotix members got their own start before moving on to FIRST Tech Challenge.
               </Typography>
             </Reveal>
@@ -68,7 +68,7 @@ const FLL = () => {
             </Typography>
             <Typography variant="body1" sx={{ color: "text.secondary", maxWidth: 640, mx: "auto" }}>
               Action Robotix has started or mentored 18 FLL teams to date. These four feeder teams are where
-              we're recruiting 9 new members for the 2026–27 season:
+              we're recruiting 9 new members for the 2026-2027 BioBuzz season:
             </Typography>
           </Box>
         </Reveal>

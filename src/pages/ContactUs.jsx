@@ -51,7 +51,7 @@ const ContactUs = () => {
     if (Object.keys(nextErrors).length > 0) return;
 
     const subject = encodeURIComponent(`Message from ${form.name} via actionrobotix.com`);
-    const body = encodeURIComponent(`${form.message}\n\n— ${form.name} (${form.email})`);
+    const body = encodeURIComponent(`${form.message}\n\n- ${form.name} (${form.email})`);
     window.location.href = `mailto:actionrobotix@gmail.com?subject=${subject}&body=${body}`;
     setToastOpen(true);
     setForm(emptyForm);
@@ -158,7 +158,7 @@ const ContactUs = () => {
                 Send Us a Message
               </Typography>
               <Typography variant="body2" sx={{ color: "text.secondary", textAlign: "center", mb: 4 }}>
-                This opens your email app with the message pre-filled — nothing is sent automatically.
+                This opens your email app with the message pre-filled. Nothing is sent automatically.
               </Typography>
               <Box component="form" onSubmit={handleSubmit} noValidate>
                 <TextField
@@ -202,7 +202,7 @@ const ContactUs = () => {
 
       <Snackbar open={toastOpen} autoHideDuration={5000} onClose={() => setToastOpen(false)} anchorOrigin={{ vertical: "bottom", horizontal: "center" }}>
         <Alert onClose={() => setToastOpen(false)} severity="success" variant="filled" sx={{ width: "100%" }}>
-          Opening your email client — thanks for reaching out!
+          Opening your email client. Thanks for reaching out!
         </Alert>
       </Snackbar>
     </PageTransition>

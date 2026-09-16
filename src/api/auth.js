@@ -18,7 +18,7 @@ export const requestPasswordReset = async (email) => {
   if (error) throw error;
 };
 
-// Passwordless sign-in for public forum participants — anyone can request a
+// Passwordless sign-in for public forum participants. Anyone can request a
 // magic link, no admin account creation involved.
 export const signInWithMagicLink = async (email, redirectPath = "/forum") => {
   const { error } = await supabase.auth.signInWithOtp({

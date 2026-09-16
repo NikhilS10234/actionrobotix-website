@@ -55,7 +55,7 @@ const ForumThread = () => {
       setReplyBody("");
       load();
     } catch {
-      setError("Couldn't post that reply — try again.");
+      setError("Couldn't post that reply. Try again.");
     } finally {
       setPosting(false);
     }

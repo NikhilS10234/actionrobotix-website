@@ -22,15 +22,15 @@ const marqueeItems = [
   "FOUNDED 2024",
   "FTC TEAM 25779",
   "CHESTERFIELD, MISSOURI",
-  "DECODE 2025–26",
-  "EVERY ACTION NEEDS A CATALYST",
+  "BIOBUZZ 2026-2027",
+  "SEASON IN PROGRESS",
   "STUDENT-LED",
 ];
 
 const seasonHighlights = [
-  { event: "STL MID League Tournament", award: "1st — Sustain Award", detail: "101.17 point average with our robot Inhibitor" },
-  { event: "EMO Super Qualifier", award: "1st — Inspire Award + Winning Alliance", detail: "135.5 point average with Catalyst" },
-  { event: "MO/KS State Championship", award: "1st — Sustain Award", detail: "8th in Advancement Points — qualified for CRI" },
+  { event: "Game Analysis", award: "BioBuzz strategy underway", detail: "Our team is studying the game and identifying the strongest scoring paths." },
+  { event: "Robot Development", award: "Design and prototyping", detail: "We are turning our BioBuzz concepts into a competition-ready robot." },
+  { event: "Season Ahead", award: "Scrimmages and qualifiers", detail: "Follow along as we test, iterate, and compete throughout 2026-2027." },
 ];
 
 const programs = [
@@ -43,13 +43,13 @@ const programs = [
   {
     icon: <PrecisionManufacturingIcon fontSize="large" />,
     title: "FIRST Tech Challenge",
-    desc: "Our home program — Team 25779 designs, builds, and codes a competition robot each season. This year's: Catalyst.",
+    desc: "Our home program: Team 25779 designs, builds, and codes a competition robot each season. This year, we are taking on BioBuzz.",
     path: "/ftc",
   },
   {
     icon: <EmojiObjectsIcon fontSize="large" />,
     title: "FIRST Robotics Competition",
-    desc: "The pinnacle of the FIRST pathway — learn what's next as our members grow into FRC-level engineering.",
+    desc: "The pinnacle of the FIRST pathway. Learn what's next as our members grow into FRC-level engineering.",
     path: "/frc",
   },
 ];
@@ -130,9 +130,9 @@ const MainApp = () => {
                       1800,
                       "Made in STL",
                       1800,
-                      "Powered by Catalyst",
+                      "Building for BioBuzz",
                       1800,
-                      "Ready for DECODE",
+                      "BioBuzz Has Started",
                       1800,
                     ]}
                     wrapper="span"
@@ -143,7 +143,7 @@ const MainApp = () => {
               </Typography>
               <Typography variant="h6" sx={{ color: "text.secondary", fontWeight: 400, maxWidth: 560, mb: 4 }}>
                 An entirely student-led robotics team designing cutting-edge robotics solutions and fostering
-                a passion for STEM in our community — welcoming everyone, from aspiring engineers to artists.
+                a passion for STEM in our community, welcoming everyone from aspiring engineers to artists.
               </Typography>
               <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
                 <Button
@@ -243,7 +243,7 @@ const MainApp = () => {
                   Teamwork, creativity, and a passion for STEM.
                 </Typography>
                 <Typography variant="body1" sx={{ color: "text.secondary", mb: 3 }}>
-                  Founded in 2024 and now in our second season, Action Robotix is entirely student-led —
+                  Founded in 2024 and now in our third season, Action Robotix is entirely student-led.
                   captains and division leads run four subteams (Design, Build, Programming, Outreach), backed
                   by an extensive mentor network of industry professionals, university professors, and fellow
                   FIRST members.
@@ -263,10 +263,10 @@ const MainApp = () => {
           <Reveal>
             <Box sx={{ textAlign: "center", mb: 6 }}>
               <Typography variant="overline" sx={{ color: "secondary.main", fontWeight: 700, letterSpacing: 2 }}>
-                DECODE 2025–26
+                BIOBUZZ 2026-2027
               </Typography>
               <Typography variant="h3" sx={{ mt: 1 }}>
-                This Season So Far
+                BioBuzz Season Update
               </Typography>
             </Box>
           </Reveal>
@@ -352,7 +352,7 @@ const MainApp = () => {
                 Help Us Reach the Next Level
               </Typography>
               <Typography variant="body1" sx={{ color: "text.secondary", mb: 4, maxWidth: 560, mx: "auto" }}>
-                Parts, registration, and travel add up fast. Every contribution — big or small — helps us
+                Parts, registration, and travel add up fast. Every contribution, big or small, helps us
                 compete, build, and keep bringing robotics to our community.
               </Typography>
               <Button size="large" variant="contained" color="secondary" endIcon={<FavoriteIcon />} onClick={() => navigate("/supportus")}>

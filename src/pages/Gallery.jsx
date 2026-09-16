@@ -25,18 +25,18 @@ const images = [
   { src: "Images/ChessCardinals.png", alt: "Chess Cardinals Presentation", category: "Outreach" },
   { src: "Images/magichouseevent.jpg", alt: "Magic House community event", category: "Outreach" },
   { src: "Images/ABOUTUSMAIN.png", alt: "Action Robotix team", category: "Team" },
-  { src: "Images/arnavA.png", alt: "Arnav A — Design", category: "Team" },
-  { src: "Images/keshav.png", alt: "Keshav — Design", category: "Team" },
-  { src: "Images/arnavM.png", alt: "Arnav M — Build", category: "Team" },
-  { src: "Images/mihir.png", alt: "Mihir — Build", category: "Team" },
-  { src: "Images/Naisha.png", alt: "Naisha — Build", category: "Team" },
-  { src: "Images/arjun.png", alt: "Arjun — Build", category: "Team" },
-  { src: "Images/ashvik.png", alt: "Ashvik — Design", category: "Team" },
-  { src: "Images/adi.png", alt: "Adi — Programming", category: "Team" },
-  { src: "Images/vihaan.png", alt: "Vihaan — Programming", category: "Team" },
-  { src: "Images/ayush.png", alt: "Ayush — Programming", category: "Team" },
-  { src: "Images/ishaan.png", alt: "Ishaan — Outreach", category: "Team" },
-  { src: "Images/nikhil.jpeg", alt: "Nikhil — Outreach", category: "Team" },
+  { src: "Images/arnavA.png", alt: "Arnav A, Design", category: "Team" },
+  { src: "Images/keshav.png", alt: "Keshav, Design", category: "Team" },
+  { src: "Images/arnavM.png", alt: "Arnav M, Build", category: "Team" },
+  { src: "Images/mihir.png", alt: "Mihir, Build", category: "Team" },
+  { src: "Images/Naisha.png", alt: "Naisha, Build", category: "Team" },
+  { src: "Images/arjun.png", alt: "Arjun, Build", category: "Team" },
+  { src: "Images/ashvik.png", alt: "Ashvik, Design", category: "Team" },
+  { src: "Images/adi.png", alt: "Adi, Programming", category: "Team" },
+  { src: "Images/vihaan.png", alt: "Vihaan, Programming", category: "Team" },
+  { src: "Images/ayush.png", alt: "Ayush, Programming", category: "Team" },
+  { src: "Images/ishaan.png", alt: "Ishaan, Outreach", category: "Team" },
+  { src: "Images/nikhil.jpeg", alt: "Nikhil, Outreach", category: "Team" },
 ];
 
 const categories = ["All", "Competitions", "Awards", "Outreach", "Team"];
@@ -72,7 +72,7 @@ const Gallery = () => {
       <PageHero
         eyebrow="MOMENTS FROM THE FIELD"
         title="Gallery"
-        subtitle="Competitions, robots, outreach, and the team behind them — a look at Action Robotix in action."
+        subtitle="Competitions, robots, outreach, and the team behind them. A look at Action Robotix in action."
       />
 
       <Box sx={{ ...sectionSx, pb: { xs: 10, md: 14 } }}>

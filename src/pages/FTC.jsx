@@ -49,7 +49,7 @@ const robotParts = [
   {
     icon: <PanToolIcon />,
     title: "Intake",
-    desc: "The mechanism that picks up game pieces — often built from rollers, claws, or belts, precisely tuned to grab elements quickly and reliably during a match.",
+    desc: "The mechanism that picks up game pieces, often built from rollers, claws, or belts, precisely tuned to grab elements quickly and reliably during a match.",
   },
   {
     icon: <HeightIcon />,
@@ -59,12 +59,12 @@ const robotParts = [
   {
     icon: <MemoryIcon />,
     title: "Control Hub & Sensors",
-    desc: "The 'brain' of the robot — running our code, reading input from sensors like encoders and distance sensors to make autonomous decisions on the field.",
+    desc: "The 'brain' of the robot, running our code and reading input from sensors like encoders and distance sensors to make autonomous decisions on the field.",
   },
   {
     icon: <BatteryChargingFullIcon />,
     title: "Power System",
-    desc: "The battery and wiring that keep every motor, sensor, and controller running reliably for a full match — and a full day of competition.",
+    desc: "The battery and wiring that keep every motor, sensor, and controller running reliably for a full match and a full day of competition.",
   },
   {
     icon: <ShieldIcon />,
@@ -76,11 +76,11 @@ const robotParts = [
 const FTC = () => {
   const navigate = useNavigate();
   const [activePart, setActivePart] = useState(0);
-  usePageTitle("FTC — Team 25779");
+  usePageTitle("FTC Team 25779");
 
   return (
     <PageTransition>
-      <PageHero eyebrow="FIRST TECH CHALLENGE" title="Team 25779 — Action Robotix" subtitle="Grades 7–12 · Chesterfield, Missouri · DECODE 2025–26 Season" />
+      <PageHero eyebrow="FIRST TECH CHALLENGE" title="Team 25779, Action Robotix" subtitle="Grades 7-12 · Chesterfield, Missouri · 2026-2027 BioBuzz Season" />
 
       <Box sx={sectionSx}>
         <Container maxWidth="lg">
@@ -107,11 +107,9 @@ const FTC = () => {
                   advanced programming tools to bring their robot to life.
                 </Typography>
                 <Typography variant="body1" sx={{ color: "text.secondary", mb: 3 }}>
-                  As Team 25779, this is where Action Robotix competes each season. In our second season —
-                  DECODE (2025–26) — our robot Catalyst earned the 1st Inspire Award and a Winning Alliance
-                  at the Eastern Missouri Super Qualifier, took the 1st Sustain Award at both the League
-                  Tournament and the MO/KS State Championship, and qualified for the Chicago Robotics
-                  Invitational (CRI).
+                  As Team 25779, this is where Action Robotix competes each season. The 2026-2027 BioBuzz
+                  season has started, and our team is deep into strategy, robot design, prototyping, and
+                  programming for the new challenge.
                 </Typography>
                 <Button variant="contained" color="primary" onClick={() => navigate("/aboutus")}>
                   Meet Our Team
@@ -232,7 +230,7 @@ const FTC = () => {
                 Anatomy of an FTC Robot
               </Typography>
               <Typography variant="body1" sx={{ color: "text.secondary", maxWidth: 560, mx: "auto", mt: 1.5 }}>
-                Click a system below — the 3D model reacts, and its wheels spin, arm lifts, and claw opens
+                Click a system below. The 3D model reacts, and its wheels spin, arm lifts, and claw opens
                 right along with it.
               </Typography>
             </Box>
@@ -293,7 +291,7 @@ const FTC = () => {
             </Grid2>
           </Grid2>
           <Typography variant="caption" sx={{ display: "block", textAlign: "center", color: "text.secondary", mt: 3 }}>
-            Illustrative 3D model — a stylized look at how these systems fit together, not our exact competition robot.
+            Illustrative 3D model, a stylized look at how these systems fit together, not our exact competition robot.
           </Typography>
         </Container>
       </Box>

@@ -44,12 +44,12 @@ const FRC = () => {
                 </Typography>
                 <Typography variant="body1" sx={{ color: "text.secondary", mb: 2 }}>
                   FRC combines the intensity of a real engineering deadline with the scale of competitive
-                  sport — teams manage fabrication, electronics, programming, strategy, and fundraising all
+                  sport. Teams manage fabrication, electronics, programming, strategy, and fundraising all
                   at once, often with support from professional mentors and sponsors.
                 </Typography>
                 <Typography variant="body1" sx={{ color: "text.secondary" }}>
                   Action Robotix currently competes in FIRST Tech Challenge as Team 25779. As our members
-                  grow, FRC represents the natural next step in the FIRST pathway — bigger robots, bigger
+                  grow, FRC represents the natural next step in the FIRST pathway: bigger robots, bigger
                   teams, bigger challenges.
                 </Typography>
               </Reveal>

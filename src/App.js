@@ -23,12 +23,6 @@ import JoinUs from './pages/JoinUs';
 import Gallery from './pages/Gallery';
 import NotFound from './pages/NotFound';
 import Season from './pages/Season';
-import Blog from './pages/Blog';
-import BlogPost from './pages/BlogPost';
-import Portfolios from './pages/Portfolios';
-import SubmitPortfolio from './pages/SubmitPortfolio';
-import Community from './pages/Community';
-import Webinars from './pages/Webinars';
 import Podcast from './pages/Podcast';
 import Forum from './pages/Forum';
 import ForumThread from './pages/ForumThread';
@@ -90,12 +84,6 @@ const routers = createBrowserRouter([
           { path: "/frc", element: <FRC /> },
           { path: "/fll", element: <FLL /> },
           { path: "/season", element: <Season /> },
-          { path: "/blog", element: <Blog /> },
-          { path: "/blog/:slug", element: <BlogPost /> },
-          { path: "/portfolios", element: <Portfolios /> },
-          { path: "/portfolios/submit", element: <SubmitPortfolio /> },
-          { path: "/community", element: <Community /> },
-          { path: "/webinars", element: <Webinars /> },
           { path: "/podcast", element: <Podcast /> },
           { path: "/forum", element: <Forum /> },
           { path: "/forum/:id", element: <ForumThread /> },

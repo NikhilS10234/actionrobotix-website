@@ -21,23 +21,14 @@ export const navGroups = [
     items: [
       { label: "Outreach", path: "/outreach" },
       { label: "Join Us", path: "/join" },
-      { label: "Portfolio Database", path: "/portfolios" },
-      { label: "Blog", path: "/blog" },
     ],
   },
-  {
-    label: "Rookie Support",
-    items: [
-      { label: "Webinars", path: "/webinars" },
-      { label: "Podcast", path: "/podcast" },
-    ],
-  },
+  { label: "Podcast", path: "/podcast" },
   {
     label: "Community",
     items: [
-      { label: "Discord & Newsletter", path: "/community" },
       { label: "Forum", path: "/forum" },
-      { label: "2026–27 Season", path: "/season" },
+      { label: "2026-2027 BioBuzz Season", path: "/season" },
     ],
   },
   { label: "Contact", path: "/contactus" },

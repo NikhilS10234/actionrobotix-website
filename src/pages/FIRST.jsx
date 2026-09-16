@@ -23,7 +23,7 @@ const programs = [
     short: "FTC",
     img: "Images/ftcRobot.jpeg",
     desc:
-      "FTC teams design, build, and program robots to compete head-to-head on a 12×12 field. This is our team's home program — Action Robotix competes as FTC Team 25779.",
+      "FTC teams design, build, and program robots to compete head-to-head on a 12×12 field. This is our team's home program. Action Robotix competes as FTC Team 25779.",
     path: "/ftc",
   },
   {
@@ -32,7 +32,7 @@ const programs = [
     short: "FRC",
     img: "Images/frcPicture.jpeg",
     desc:
-      "The most advanced FIRST program — teams get a new challenge each year and build industrial-sized robots within a six-week window to compete in alliances with other teams.",
+      "The most advanced FIRST program. Teams get a new challenge each year and build industrial-sized robots within a six-week window to compete in alliances with other teams.",
     path: "/frc",
   },
 ];
@@ -56,7 +56,7 @@ const FIRST = () => {
               Founded in 1989 by inventor Dean Kamen, FIRST® engages students in grades K–12 through
               mentor-guided robotics programs that build skills in engineering, problem-solving, teamwork, and
               communication. Every program shares a culture of "Gracious Professionalism" and
-              "Coopertition®" — where teams support each other even while competing.
+              "Coopertition®," where teams support each other even while competing.
             </Typography>
           </Reveal>
 

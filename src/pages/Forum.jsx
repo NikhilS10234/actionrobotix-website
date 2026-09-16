@@ -54,7 +54,7 @@ const Forum = () => {
       setShowNewForm(false);
       navigate(`/forum/${thread.id}`);
     } catch {
-      setError("Couldn't post that thread — try again.");
+      setError("Couldn't post that thread. Try again.");
     } finally {
       setPosting(false);
     }
@@ -65,7 +65,7 @@ const Forum = () => {
       <PageHero
         eyebrow="COMMUNITY"
         title="Forum"
-        subtitle="Ask questions, share advice, and talk shop with other FTC teams — especially if you're a rookie team figuring things out."
+        subtitle="Ask questions, share advice, and talk shop with other FTC teams, especially if you're a rookie team figuring things out."
       />
 
       {!isSupabaseConfigured ? (
@@ -126,7 +126,7 @@ const Forum = () => {
 
             {!loading && threads.length === 0 && (
               <Typography variant="body1" sx={{ color: "text.secondary", textAlign: "center", mt: 4 }}>
-                No threads yet — be the first to post.
+                No threads yet. Be the first to post.
               </Typography>
             )}
 

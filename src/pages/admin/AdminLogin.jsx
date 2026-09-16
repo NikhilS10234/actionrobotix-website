@@ -44,7 +44,7 @@ const AdminLogin = () => {
       await requestPasswordReset(email);
       setResetSent(true);
     } catch {
-      setError("Couldn't send a reset email — try again later.");
+      setError("Couldn't send a reset email. Try again later.");
     }
   };
 
@@ -64,7 +64,7 @@ const AdminLogin = () => {
           <Box sx={{ ...glassCardSx, p: { xs: 3, md: 5 } }}>
             {resetSent && (
               <Alert severity="success" sx={{ mb: 3 }}>
-                Password reset email sent — check your inbox.
+                Password reset email sent. Check your inbox.
               </Alert>
             )}
             {error && (

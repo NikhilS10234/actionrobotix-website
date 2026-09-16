@@ -8,7 +8,7 @@ export const isSupabaseConfigured = Boolean(supabaseUrl && supabaseAnonKey);
 if (!isSupabaseConfigured) {
   // eslint-disable-next-line no-console
   console.warn(
-    "Supabase is not configured — set REACT_APP_SUPABASE_URL and REACT_APP_SUPABASE_ANON_KEY in .env. See SETUP.md."
+    "Supabase is not configured. Set REACT_APP_SUPABASE_URL and REACT_APP_SUPABASE_ANON_KEY in .env. See SETUP.md."
   );
 }
 

@@ -1,4 +1,4 @@
--- Action Robotix website — migration 002
+-- Action Robotix website migration 002
 -- Run this once in your Supabase project's SQL editor (Project > SQL Editor > New query),
 -- AFTER schema.sql has already been run.
 --
@@ -9,10 +9,9 @@
 --      only because the only way to get an authenticated session was a team
 --      account created by you in the dashboard. We're about to add a public
 --      forum with sign-in-to-post, which creates real "authenticated" sessions
---      for any visitor — so admin policies must now check membership in an
+--      for any visitor, so admin policies must now check membership in an
 --      explicit `admins` table instead.
---   2. Adds tables for the public forum, monthly webinar/events calendar, and
---      podcast episode list.
+--   2. Adds tables for the public forum and podcast episode list.
 
 -- ---------------------------------------------------------------------------
 -- 1. Admins table + fixed policies on existing tables
@@ -35,7 +34,7 @@ on conflict (user_id) do nothing;
 
 -- Helper used throughout instead of auth.role() = 'authenticated'. SECURITY
 -- DEFINER runs this as the function owner (bypasses RLS on admins), which is
--- required — otherwise any policy on `admins` that queries `admins` itself
+-- required. Otherwise any policy on `admins` that queries `admins` itself
 -- recurses infinitely.
 create or replace function is_admin()
 returns boolean
@@ -51,35 +50,12 @@ grant execute on function is_admin() to anon, authenticated;
 
 -- Only admins can see the admins list; nobody can self-insert via the API
 -- (adding an admin is a manual dashboard/SQL step, same as creating the
--- underlying auth user always has been). Uses is_admin(), NOT a direct
--- subquery on admins — a policy on `admins` that queries `admins` directly
+-- underlying auth user always has been). Uses is_admin(), not a direct
+-- subquery on admins. A policy on `admins` that queries `admins` directly
 -- causes infinite recursion.
 create policy "admins can read admins" on admins
   for select using (is_admin());
 
--- Replace the old "any signed-in user" policies with admin-gated ones.
-drop policy if exists "admin full access to posts" on blog_posts;
-create policy "admin full access to posts" on blog_posts
-  for all using (is_admin()) with check (is_admin());
-
-drop policy if exists "admin manage portfolios" on team_portfolios;
-create policy "admin manage portfolios" on team_portfolios
-  for update using (is_admin()) with check (is_admin());
-drop policy if exists "admin delete portfolios" on team_portfolios;
-create policy "admin delete portfolios" on team_portfolios
-  for delete using (is_admin());
-drop policy if exists "admin read all portfolios" on team_portfolios;
-create policy "admin read all portfolios" on team_portfolios
-  for select using (is_admin());
-
-drop policy if exists "admin read subscribers" on newsletter_subscribers;
-create policy "admin read subscribers" on newsletter_subscribers
-  for select using (is_admin());
-drop policy if exists "admin delete subscribers" on newsletter_subscribers;
-create policy "admin delete subscribers" on newsletter_subscribers
-  for delete using (is_admin());
-
-drop policy if exists "admin update settings" on site_settings;
 create policy "admin update settings" on site_settings
   for update using (is_admin()) with check (is_admin());
 
@@ -87,7 +63,7 @@ create policy "admin update settings" on site_settings
 -- 2. Forum
 -- ---------------------------------------------------------------------------
 -- Trust model: anyone can read. Posting a thread/reply requires a signed-in
--- session (magic-link email, no password) — this is a normal "authenticated"
+-- session (magic-link email, no password). This is a normal "authenticated"
 -- Supabase user, NOT an admin. Authors can edit/delete their own posts;
 -- admins can moderate (delete) anything.
 
@@ -138,35 +114,9 @@ grant delete on forum_replies to authenticated;
 grant select on forum_replies to anon;
 
 -- ---------------------------------------------------------------------------
--- 3. Webinars / events calendar
+-- 3. Podcast episodes
 -- ---------------------------------------------------------------------------
--- Public read; only admins manage. Aimed at monthly webinars for rookie FTC
--- teams, but generic enough for any team event.
-
-create table if not exists webinars (
-  id uuid primary key default gen_random_uuid(),
-  title text not null,
-  description text,
-  starts_at timestamptz not null,
-  duration_minutes integer not null default 60,
-  meeting_url text,
-  created_at timestamptz not null default now()
-);
-
-alter table webinars enable row level security;
-
-create policy "public read webinars" on webinars
-  for select using (true);
-create policy "admin manage webinars" on webinars
-  for all using (is_admin()) with check (is_admin());
-
-grant select on webinars to anon;
-grant select, insert, update, delete on webinars to authenticated;
-
--- ---------------------------------------------------------------------------
--- 4. Podcast episodes
--- ---------------------------------------------------------------------------
--- Structure only for now — episodes can be added once recording starts.
+-- Structure only for now. Episodes can be added once recording starts.
 -- external_url can point to Spotify/YouTube/Apple Podcasts/etc once live.
 
 create table if not exists podcast_episodes (
