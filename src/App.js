@@ -24,8 +24,6 @@ import Gallery from './pages/Gallery';
 import NotFound from './pages/NotFound';
 import Season from './pages/Season';
 import Podcast from './pages/Podcast';
-import Forum from './pages/Forum';
-import ForumThread from './pages/ForumThread';
 import AdminLogin from './pages/admin/AdminLogin';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import ScrollProgress from './components/ScrollProgress';
@@ -85,8 +83,6 @@ const routers = createBrowserRouter([
           { path: "/fll", element: <FLL /> },
           { path: "/season", element: <Season /> },
           { path: "/podcast", element: <Podcast /> },
-          { path: "/forum", element: <Forum /> },
-          { path: "/forum/:id", element: <ForumThread /> },
           { path: "/admin/login", element: <AdminLogin /> },
           { path: "/admin", element: <RequireAdmin><AdminDashboard /></RequireAdmin> },
           { path: "*", element: <NotFound /> },

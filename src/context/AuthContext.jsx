@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { supabase, isSupabaseConfigured } from "../lib/supabaseClient";
-import { signIn as apiSignIn, signOut as apiSignOut, signInWithMagicLink as apiSignInWithMagicLink } from "../api/auth";
+import { signIn as apiSignIn, signOut as apiSignOut } from "../api/auth";
 import { checkIsAdmin } from "../api/admins";
 
 const AuthContext = createContext(null);
@@ -36,10 +36,6 @@ export const AuthProvider = ({ children }) => {
     return signedInUser;
   };
 
-  const signInWithMagicLink = async (email, redirectPath) => {
-    await apiSignInWithMagicLink(email, redirectPath);
-  };
-
   const signOut = async () => {
     await apiSignOut();
     setUser(null);
@@ -47,7 +43,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, isAdmin, loading, signIn, signInWithMagicLink, signOut }}>
+    <AuthContext.Provider value={{ user, isAdmin, loading, signIn, signOut }}>
       {children}
     </AuthContext.Provider>
   );

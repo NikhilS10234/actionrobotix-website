@@ -1,6 +1,6 @@
 # Backend Setup (Supabase)
 
-The forum, podcast, site settings, and admin panel need a Supabase project.
+The podcast, site settings, and admin panel need a Supabase project.
 This is a one-time setup only your team can do.
 
 ## 1. Create a Supabase project
@@ -13,7 +13,8 @@ This is a one-time setup only your team can do.
 
 1. In the Supabase dashboard, open **SQL Editor** → **New query**.
 2. Paste the entire contents of [`supabase/schema.sql`](supabase/schema.sql) from this repo and click **Run**.
-3. This creates the `site_settings` table and seeds the BioBuzz announcement and season content.
+3. Run [`supabase/002_admins_podcast.sql`](supabase/002_admins_podcast.sql) next.
+4. These create the site settings, admin, and podcast tables and seed the BioBuzz announcement and season content.
 
 ## 3. Connect the site to your project
 
@@ -26,7 +27,7 @@ This is a one-time setup only your team can do.
    ```
 4. Restart `npm start` if it's running. Create React App only reads `.env` on startup.
 
-Until this is done, the forum, podcast, and admin pages show a "not set up yet"
+Until this is done, the podcast and admin pages show a "not set up yet"
 message instead of crashing. The rest of the site works normally.
 
 ## 4. Create admin (team) accounts
@@ -41,7 +42,6 @@ account can manage the whole site. To create an account for a team member:
 ## 5. What you can manage from `/admin`
 
 - **Podcast**: add, edit, or remove podcast episodes.
-- **Forum**: moderate public forum threads and replies.
 - **Site Settings**: edit the site-wide announcement banner and the `/season` page content.
 
 ## Notes / things intentionally out of scope

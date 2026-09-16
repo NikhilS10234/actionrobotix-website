@@ -17,21 +17,20 @@ export const navGroups = [
     ],
   },
   {
-    label: "Get Involved",
-    items: [
-      { label: "Outreach", path: "/outreach" },
-      { label: "Join Us", path: "/join" },
-    ],
-  },
-  { label: "Podcast", path: "/podcast" },
-  {
     label: "Community",
     items: [
-      { label: "Forum", path: "/forum" },
+      { label: "Outreach", path: "/outreach" },
+      { label: "Podcast", path: "/podcast" },
       { label: "2026-2027 BioBuzz Season", path: "/season" },
     ],
   },
-  { label: "Contact", path: "/contactus" },
+  {
+    label: "Contact",
+    items: [
+      { label: "Contact Us", path: "/contactus" },
+      { label: "Join Us", path: "/join" },
+    ],
+  },
 ];
 
 // Flat list of every leaf link, in nav order, for the footer's Quick Links column.

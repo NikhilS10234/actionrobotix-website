@@ -5,11 +5,9 @@ import usePageTitle from "../../hooks/usePageTitle";
 import { useAuth } from "../../context/AuthContext";
 import AdminSettingsManager from "./AdminSettingsManager";
 import AdminPodcastManager from "./AdminPodcastManager";
-import AdminForumManager from "./AdminForumManager";
 
 const TABS = [
   { label: "Podcast", Component: AdminPodcastManager },
-  { label: "Forum", Component: AdminForumManager },
   { label: "Site Settings", Component: AdminSettingsManager },
 ];
 
